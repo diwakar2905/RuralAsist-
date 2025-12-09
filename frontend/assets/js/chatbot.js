@@ -9,8 +9,6 @@ function escapeHTML(str) {
         .replace(/'/g, "&#039;");
 }
 
-const API_BASE_URL = window.AppConfig?.API_BASE_URL;
-
 const chatBox = document.getElementById("chat-box");
 const chatInput = document.getElementById("chat-input");
 const sendBtn = document.getElementById("send-btn");

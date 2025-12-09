@@ -1,5 +1,4 @@
 // Use global config if available, fallback to direct values
-const API_BASE_URL = window.AppConfig?.API_BASE_URL;
 const MAX_FILE_SIZE = window.AppConfig?.MAX_FILE_SIZE || 10 * 1024 * 1024; // 10MB
 const ALLOWED_TYPES = window.AppConfig?.ALLOWED_FILE_TYPES || ['image/jpeg', 'image/jpg', 'image/png', 'application/pdf'];
 

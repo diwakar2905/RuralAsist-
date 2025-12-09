@@ -1,5 +1,4 @@
-// Use global config if available, fallback to direct URL
-const API_BASE_URL = window.AppConfig?.API_BASE_URL;
+// Use global config if available
 
 document.addEventListener('DOMContentLoaded', () => {
   const emailEl = document.getElementById('prof-email');

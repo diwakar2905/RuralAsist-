@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     // API Configuration
-    const API_BASE_URL = window.AppConfig?.API_BASE_URL;
     
     // Initialize AOS
     if (typeof AOS !== 'undefined') {

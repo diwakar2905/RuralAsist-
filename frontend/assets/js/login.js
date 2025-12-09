@@ -1,5 +1,4 @@
-// Use global config if available, fallback to production URL
-const API_BASE_URL = window.AppConfig?.API_BASE_URL;
+// Use global config if available
 const STORAGE_KEYS = window.AppConfig?.STORAGE_KEYS || {
     TOKEN: 'ruralassist_token',
     USER_EMAIL: 'user_email',

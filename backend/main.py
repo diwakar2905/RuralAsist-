@@ -39,6 +39,7 @@ frontend_urls_str = os.environ.get(
     "http://localhost:5500,http://127.0.0.1:5500,https://ruralassist.vercel.app,https://ruralasist-beta.vercel.app"
 )
 origins = [url.strip() for url in frontend_urls_str.split(",")]
+print("✅ Allowed CORS origins:", origins)
 
 
 app.add_middleware(

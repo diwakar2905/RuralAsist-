@@ -14,7 +14,6 @@ function escapeHTML(str) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 }
-const API_BASE_URL = window.AppConfig?.API_BASE_URL;
 const FAQ_LANG_KEY = window.AppConfig?.STORAGE_KEYS?.LANGUAGE || 'ruralassist_language';
 
 // Global variables

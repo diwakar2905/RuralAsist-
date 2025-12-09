@@ -58,7 +58,7 @@ if (typeof window !== 'undefined' && window.location &&
     }
 }
 // --- CONFIGURATION ---
-const API_BASE_URL = window.AppConfig?.API_BASE_URL;
+var API_BASE_URL = window.AppConfig?.API_BASE_URL;
 
 // --- LANGUAGE TOGGLE FUNCTIONALITY ---
 const MAIN_LANG_KEY = 'ruralassist_language';
