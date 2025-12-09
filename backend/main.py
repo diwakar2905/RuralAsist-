@@ -37,6 +37,7 @@ origins = [
     "http://localhost:5500",
     "http://127.0.0.1:5500",
     "https://ruralassist.vercel.app",
+    "https://ruralasist-beta.vercel.app"
 ]
 
 app.add_middleware(
