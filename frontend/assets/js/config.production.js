@@ -5,7 +5,7 @@
 
 const ProductionConfig = {
     // API Configuration - will be updated with actual Render URL
-    API_BASE_URL: "https://rural-asist.onrender.com",
+    API_BASE_URL: "https://ruralasist-jhwx.onrender.com/",
     
     // File upload limits
     MAX_FILE_SIZE: 10 * 1024 * 1024, // 10MB
