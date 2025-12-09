@@ -4,11 +4,8 @@ from typing import List, Optional
 import json
 from pathlib import Path
 from datetime import datetime
-
-def get_cache(key, ttl=120):
-def set_cache(key, value):
-# --- In-memory response cache ---
 import time
+# --- In-memory response cache ---
 _RESPONSE_CACHE = {}
 def get_cache(key, ttl=120):
     now = time.time()
@@ -16,8 +13,10 @@ def get_cache(key, ttl=120):
     if entry and now - entry['ts'] < ttl:
         return entry['value']
     return None
+
 def set_cache(key, value):
     _RESPONSE_CACHE[key] = {'value': value, 'ts': time.time()}
+import time
 
 # --- In-memory FAQ dataset cache (30 min) ---
 _FAQ_CACHE = None
