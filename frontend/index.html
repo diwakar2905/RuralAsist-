@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RuralAsist - Unified Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/chatbot.css" />
+    <style>
+        /* Hero spacing and sizing */
+        @media (min-width: 992px) {
+            .hero-carousel { height: 420px; }
+        }
+        @media (max-width: 991.98px) {
+            .hero-carousel { height: 280px; }
+        }
+
+        .hero-carousel {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        .hero-carousel .carousel-inner,
+        .hero-carousel .carousel-item { height: 100%; }
+        .hero-carousel .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-carousel::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.0) 40%);
+            pointer-events: none;
+        }
+
+        /* Hero background accents */
+        .hero-section {
+            position: relative;
+            background:
+                radial-gradient(900px 900px at -10% 0%, rgba(52, 168, 83, 0.08), transparent 40%),
+                radial-gradient(800px 800px at 110% 10%, rgba(251, 192, 45, 0.10), transparent 45%);
+        }
+        .hero-section h1 {
+            background: linear-gradient(90deg, var(--brand-secondary), var(--brand-primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-section .lead { color: var(--text-muted); }
+
+        /* Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--brand-secondary), var(--brand-primary));
+            border: none;
+            box-shadow: 0 10px 20px rgba(52,168,83,0.25);
+            transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(79, 70, 229, 0.28);
+            filter: brightness(1.02);
+        }
+        .btn-outline-secondary {
+            color: #111827;
+            border-color: rgba(17,24,39,.2);
+            background: rgba(255,255,255,.6);
+            backdrop-filter: saturate(140%) blur(6px);
+            -webkit-backdrop-filter: saturate(140%) blur(6px);
+            transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+        }
+        .btn-outline-secondary:hover {
+            background: #fff;
+            box-shadow: 0 10px 20px rgba(17,24,39,.08);
+            transform: translateY(-2px);
+        }
+
+        /* Section title accent */
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: "";
+            display: block;
+            height: 4px;
+            width: 80px;
+            margin: .6rem auto 0;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--brand-secondary), var(--brand-primary));
+        }
+
+        /* Stats cards */
+        .stats-section .stat-item {
+            background: var(--surface-soft);
+            border: 1px solid rgba(79,70,229,0.15);
+            border-radius: 1rem;
+            padding: 1.25rem;
+            box-shadow: var(--shadow-md);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .stats-section .stat-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .stats-section .stat-item i {
+            font-size: 1.75rem;
+            color: var(--brand-primary);
+        }
+
+        /* Feature cards */
+        .feature-card {
+            border: 1px solid rgba(17,24,39,0.08);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(79,70,229,.35);
+        }
+        .feature-card .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background: linear-gradient(135deg, var(--brand-secondary), #2E8E46);
+            box-shadow: 0 10px 20px rgba(52,168,83,.25);
+        }
+
+        /* Popular schemes cards */
+        .scheme-card {
+            border: 1px solid rgba(17,24,39,0.08);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+        }
+        .scheme-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(79,70,229,.35);
+        }
+
+        /* Soft badge helpers */
+        .bg-success-soft { background: rgba(16, 185, 129, .12) !important; color: #059669 !important; }
+        .bg-primary-soft { background: rgba(59, 130, 246, .12) !important; color: #2563eb !important; }
+
+        /* Light alt background */
+        .bg-light-alt {
+            background:
+                radial-gradient(600px 600px at 5% 10%, rgba(79,70,229,0.07), transparent 40%),
+                radial-gradient(500px 500px at 95% 0%, rgba(20,184,166,0.08), transparent 40%),
+                #f8fafc;
+        }
+
+        /* Carousel indicators */
+        .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,.8);
+            margin: 0 6px;
+            transition: transform .2s ease, background-color .2s ease;
+        }
+        .carousel-indicators .active {
+            background-color: #fff;
+            transform: scale(1.15);
+        }
+
+        /* Footer tweaks */
+        .footer {
+            background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.00));
+            border-top: 1px solid rgba(17,24,39,0.06);
+        }
+        .footer .footer-links a:hover { color: var(--brand-primary); }
+
+        /* Utilities */
+        .lead { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="main-content flex-grow-1 p-0">
+        <!-- 1. Hero Section -->
+        <section class="hero-section mt-5 pt-5" style="margin-top: 100px !important;">
+            <div class="container-fluid px-4">
+                <div class="row align-items-center g-5">
+                    <!-- Left side: Text and Buttons -->
+                    <div class="col-lg-5 text-center text-lg-start">
+                        <h1 class="display-4 fw-bold mb-3" data-aos="fade-right" data-lang-en="Empowering Rural India, One Click at a Time." data-lang-hi="ग्रामीण भारत को सशक्त बनाना, एक क्लिक में।">Empowering Rural India, One Click at a Time.</h1>
+                        <p class="lead text-muted mb-4" data-aos="fade-right" data-aos-delay="100" data-lang-en="Your unified platform for accessing government schemes, services, and AI-powered support." data-lang-hi="सरकारी योजनाओं, सेवाओं और AI-संचालित सहायता तक पहुंचने के लिए आपका एकीकृत मंच।">Your unified platform for accessing government schemes, services, and AI-powered support.</p>
+                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="200">
+                            <a href="schemes.html" class="btn btn-primary btn-lg" data-lang-en="Explore Schemes" data-lang-hi="योजनाएं देखें">Explore Schemes</a>
+                            <a href="#features" class="btn btn-outline-secondary btn-lg" data-lang-en="Learn More" data-lang-hi="और जानें">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Right side: Carousel -->
+                    <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+                        <div id="heroCarousel" class="carousel slide shadow-lg rounded-3 hero-carousel" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner rounded-3">
+                                <div class="carousel-item active">
+                                    <img src="assets/images/1.png" class="d-block w-100" alt="Rural community engaging with technology">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/2.png" class="d-block w-100" alt="Farmer using a smartphone in a field">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/3.png" class="d-block w-100" alt="Students in a rural school">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/4.png" class="d-block w-100" alt="Healthcare worker assisting a villager">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="content-wrapper">
+            <!-- 2. Stats Section -->
+            <section class="stats-section py-3" data-aos="fade-up">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="stat-item">
+                            <i class="bi bi-journal-text"></i>
+                            <h2 class="display-5 fw-bold">50+</h2>
+                            <p class="lead" data-lang-en="Schemes Listed" data-lang-hi="सूचीबद्ध योजनाएं">Schemes Listed</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-item">
+                            <i class="bi bi-people-fill"></i>
+                            <h2 class="display-5 fw-bold">10k+</h2>
+                            <p class="lead" data-lang-en="Users Helped" data-lang-hi="उपयोगकर्ताओं की मदद">Users Helped</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-item">
+                            <i class="bi bi-headset"></i>
+                            <h2 class="display-5 fw-bold">24/7</h2>
+                            <p class="lead" data-lang-en="AI Assistance" data-lang-hi="AI सहायता">AI Assistance</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 3. Core Features Section -->
+            <section id="features" class="core-features-section py-3 bg-light-alt">
+                <div class="text-center mb-4">
+                    <h2 class="section-title" data-lang-en="Everything You Need in One Place" data-lang-hi="एक ही जगह पर सब कुछ">Everything You Need in One Place</h2>
+                    <p class="lead text-muted" data-lang-en="From finding schemes to reporting scams, we've got you covered." data-lang-hi="योजनाएं खोजने से लेकर धोखाधड़ी रिपोर्ट करने तक, हम आपकी मदद के लिए हैं।">From finding schemes to reporting scams, we've got you covered.</p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+                        <div class="card feature-card h-100">
+                            <div class="card-body">
+                                <div class="feature-icon"><i class="bi bi-journal-text"></i></div>
+                                <h5 class="card-title" data-lang-en="Govt. Schemes" data-lang-hi="सरकारी योजनाएं">Govt. Schemes</h5>
+                                <p class="card-text" data-lang-en="Find relevant welfare schemes for you." data-lang-hi="अपने लिए उपयुक्त कल्याणकारी योजनाएं खोजें।">Find relevant welfare schemes for you.</p>
+                                <a href="schemes.html" class="stretched-link-custom" data-lang-en="Explore" data-lang-hi="देखें">Explore <i class="bi bi-arrow-right-short"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                        <div class="card feature-card h-100">
+                            <div class="card-body">
+                                <div class="feature-icon"><i class="bi bi-camera"></i></div>
+                                <h5 class="card-title" data-lang-en="Doc Scanner" data-lang-hi="दस्तावेज़ स्कैनर">Doc Scanner</h5>
+                                <p class="card-text" data-lang-en="Extract text from your documents instantly." data-lang-hi="अपने दस्तावेज़ों से तुरंत टेक्स्ट निकालें।">Extract text from your documents instantly.</p>
+                                <a href="ocr.html" class="stretched-link-custom" data-lang-en="Scan Now" data-lang-hi="अभी स्कैन करें">Scan Now <i class="bi bi-arrow-right-short"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                        <div class="card feature-card h-100">
+                            <div class="card-body">
+                                <div class="feature-icon"><i class="bi bi-shield-exclamation"></i></div>
+                                <h5 class="card-title" data-lang-en="Scam Reporting" data-lang-hi="धोखाधड़ी रिपोर्ट">Scam Reporting</h5>
+                                <p class="card-text" data-lang-en="Report suspicious calls or messages." data-lang-hi="संदिग्ध कॉल या संदेश की रिपोर्ट करें।">Report suspicious calls or messages.</p>
+                                <a href="report.html" class="stretched-link-custom" data-lang-en="Report" data-lang-hi="रिपोर्ट करें">Report <i class="bi bi-arrow-right-short"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 4. Popular Schemes Section -->
+            <section class="popular-schemes-section py-3">
+                <div class="text-center mb-4">
+                    <h2 class="section-title" data-lang-en="Trending Government Schemes" data-lang-hi="लोकप्रिय सरकारी योजनाएं">Trending Government Schemes</h2>
+                    <p class="lead text-muted" data-lang-en="Discover popular programs that are helping citizens across India." data-lang-hi="भारत भर में नागरिकों की मदद करने वाले लोकप्रिय कार्यक्रमों की खोज करें।">Discover popular programs that are helping citizens across India.</p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-lg-6" data-aos="zoom-in">
+                        <div class="card scheme-card h-100">
+                            <div class="card-body">
+                                <span class="badge bg-success-soft text-success mb-2">Agriculture</span>
+                                <h5 class="card-title">Pradhan Mantri Kisan Samman Nidhi</h5>
+                                <p class="card-text text-muted">An income support scheme providing ₹6,000 per year to all landholding farmer families.</p>
+                            </div>
+                            <div class="card-footer"><a href="schemes.html?q=kisan" class="btn btn-outline-secondary w-100">Learn More</a></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card scheme-card h-100">
+                            <div class="card-body">
+                                <span class="badge bg-primary-soft text-primary mb-2">Health</span>
+                                <h5 class="card-title">Ayushman Bharat PM-JAY</h5>
+                                <p class="card-text text-muted">Health coverage of up to ₹5 lakh per family per year for secondary and tertiary care hospitalization.</p>
+                            </div>
+                            <div class="card-footer"><a href="schemes.html?q=ayushman" class="btn btn-outline-secondary w-100">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. DigiLocker Guide Section -->
+            <section class="digilocker-guide-section py-3 bg-light-alt">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 d-none d-lg-block" data-aos="fade-right">
+                        <img src="assets/images/9.png" alt="Digital documents illustration" class="img-fluid">
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <h2 class="section-title" data-lang-en="Your Documents, Digitally Secure" data-lang-hi="आपके दस्तावेज़, डिजिटल रूप से सुरक्षित">Your Documents, Digitally Secure</h2>
+                        <p class="lead text-muted mt-3 mb-4" data-lang-en="Learn how to use DigiLocker to store and access your official documents like Aadhaar and PAN cards anytime, anywhere, directly from your phone." data-lang-hi="जानें कि DigiLocker का उपयोग करके अपने आधिकारिक दस्तावेज़ जैसे आधार और पैन कार्ड को कभी भी, कहीं भी, सीधे अपने फोन से कैसे स्टोर और एक्सेस करें।">Learn how to use DigiLocker to store and access your official documents like Aadhaar and PAN cards anytime, anywhere, directly from your phone.</p>
+                        <a href="digilocker.html" class="btn btn-success btn-lg" data-lang-en="Open DigiLocker Guide" data-lang-hi="DigiLocker गाइड खोलें">Open DigiLocker Guide</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 6. FAQ Section -->
+        <section id="faq" class="faq-section py-5">
+            <div class="content-wrapper">
+                <!-- Header -->
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-6 fw-bold mb-3" data-lang-en="Frequently Asked Questions" data-lang-hi="अक्सर पूछे जाने वाले प्रश्न">Frequently Asked Questions</h2>
+                    <p class="lead text-muted" data-lang-en="Find quick answers to common questions about RuralAsist features" data-lang-hi="RuralAsist सुविधाओं के बारे में सामान्य प्रश्नों के त्वरित उत्तर खोजें">Find quick answers to common questions about RuralAsist features</p>
+                </div>
+
+                <!-- Search Box -->
+                <div class="row justify-content-center mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-8">
+                        <div class="faq-search-wrapper">
+                            <div class="input-group faq-search-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-search text-muted"></i>
+                                </span>
+                                <input type="text" id="faq-search-input" class="form-control faq-search-input" 
+                                       placeholder="Search FAQs... (e.g., 'login', 'schemes', 'OCR')" 
+                                       data-lang-en-placeholder="Search FAQs... (e.g., 'login', 'schemes', 'OCR')" 
+                                       data-lang-hi-placeholder="FAQ खोजें... (जैसे, 'लॉगिन', 'योजनाएं', 'OCR')">
+                            </div>
+                            <div class="faq-search-hints mt-3">
+                                <span class="text-muted small me-2" data-lang-en="Popular: " data-lang-hi="लोकप्रिय: ">Popular: </span>
+                                <button class="faq-hint-tag" data-category="login">Login</button>
+                                <button class="faq-hint-tag" data-category="schemes">Schemes</button>
+                                <button class="faq-hint-tag" data-category="ocr">OCR</button>
+                                <button class="faq-hint-tag" data-category="scam">Scam Report</button>
+                                <button class="faq-hint-tag" data-category="profile">Profile</button>
+                                <button class="faq-hint-tag" data-category="all">Show All</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Results -->
+                <div class="row" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-12">
+                        <div id="faq-results" class="faq-accordion">
+                            <div class="accordion" id="faqAccordion">
+                                <!-- FAQ items will be populated here -->
+                            </div>
+                        </div>
+                        <div id="faq-no-results" class="text-center py-5 d-none">
+                            <i class="bi bi-search text-muted" style="font-size: 3rem; opacity: 0.3;"></i>
+                            <h5 class="mt-3 text-muted">No FAQs found</h5>
+                            <p class="text-muted">Try searching with different keywords or check all FAQs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back to top -->
+                <div class="mt-5 text-center">
+                    <a href="#top" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-up me-2"></i><span data-lang-en="Back to top" data-lang-hi="ऊपर जाएं">Back to top</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Modern Footer -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="1.png" alt="RuralAsist Logo" style="width:28px;height:28px;border-radius:6px;object-fit:cover;">
+                        <p class="mb-0 text-muted">&copy; 2025 RuralAssist | Made in India</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="about.html" data-lang-en="About" data-lang-hi="हमारे बारे में">About</a>
+                        <a href="privacy.html" data-lang-en="Privacy" data-lang-hi="गोपनीयता">Privacy</a>
+                        <a href="contact.html" data-lang-en="Contact" data-lang-hi="संपर्क">Contact</a>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    </main>
+
+    <!-- Chatbot Placeholder -->
+    <div id="chatbot-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <script>
+        // FAQ Data
+        const faqData = [
+            {
+                id: 'login-otp',
+                category: 'login',
+                question: 'How do I log in with OTP?',
+                answer: 'Enter your email on the Login page, click "Send OTP", then enter the OTP sent to your email. This ensures secure email-based authentication for your account.'
+            },
+            {
+                id: 'schemes-find',
+                category: 'schemes',
+                question: 'Where can I find government schemes?',
+                answer: 'Visit the "Schemes" page to browse 150+ government schemes. Filter by category (Agriculture, Education, Health, Housing, Employment) or search by keywords. Each scheme shows detailed eligibility criteria, benefits, and application links.'
+            },
+            {
+                id: 'ocr-scan',
+                category: 'ocr',
+                question: 'How do I scan a document (OCR)?',
+                answer: 'Go to OCR page, upload an image (JPG, PNG) or PDF document up to 10MB, click "Extract Text" to get instant text recognition. Supports both English and Hindi text. Works best with clear, well-lit images.'
+            },
+            {
+                id: 'scam-report',
+                category: 'scam',
+                question: 'How do I report a scam or suspicious call?',
+                answer: 'Visit the "Report Scam" page, enter the phone number or message content, describe the incident, and submit. Our AI will analyze the content for scam patterns and add it to our database to protect other users.'
+            },
+            {
+                id: 'profile-create',
+                category: 'profile',
+                question: 'How do I create and manage my profile?',
+                answer: 'After logging in, go to your Profile page to add personal details, upload documents, track scheme applications, and manage your preferences. Keep your profile updated to get relevant scheme recommendations.'
+            },
+            {
+                id: 'schemes-eligible',
+                category: 'schemes',
+                question: 'How do I know if I\'m eligible for a scheme?',
+                answer: 'Each scheme page shows detailed eligibility criteria including age, income, location, and other requirements. You can also use the filter options to narrow down schemes based on your specific situation.'
+            },
+            {
+                id: 'digilocker-guide',
+                category: 'profile',
+                question: 'What is DigiLocker and how do I use it?',
+                answer: 'DigiLocker is a government platform to store digital copies of your documents like Aadhaar, PAN card, etc. Check our DigiLocker Guide for step-by-step instructions on setting up and using this secure document storage system.'
+            },
+            {
+                id: 'language-switch',
+                category: 'general',
+                question: 'Can I use the website in Hindi?',
+                answer: 'Yes! Click the language toggle (EN/हि) in the top navigation to switch between English and Hindi. The entire website interface will change to your selected language.'
+            }
+        ];
+        
+        let filteredFaqs = faqData;
+        
+        // Initialize FAQ functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true,
+            });
+            
+            // Load initial FAQs
+            renderFaqs(faqData);
+            
+            // Search input handler
+            const searchInput = document.getElementById('faq-search-input');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const query = this.value.toLowerCase().trim();
+                    filterFaqs(query);
+                });
+            }
+            
+            // Category filter handlers
+            document.querySelectorAll('.faq-hint-tag').forEach(tag => {
+                tag.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    filterByCategory(category);
+                    
+                    // Update active state
+                    document.querySelectorAll('.faq-hint-tag').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+        
+        function renderFaqs(faqs) {
+            const container = document.getElementById('faqAccordion');
+            const noResults = document.getElementById('faq-no-results');
+            
+            if (faqs.length === 0) {
+                container.innerHTML = '';
+                noResults.classList.remove('d-none');
+                return;
+            }
+            
+            noResults.classList.add('d-none');
+            
+            // Show first 5 FAQs expanded by default
+            container.innerHTML = faqs.map((faq, index) => `
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="heading${faq.id}">
+                        <button class="accordion-button ${index < 5 ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${faq.id}" aria-expanded="${index < 5}" aria-controls="collapse${faq.id}">
+                            <div>
+                                <div class="faq-category-badge">${faq.category}</div>
+                                <div>${faq.question}</div>
+                            </div>
+                        </button>
+                    </h3>
+                    <div id="collapse${faq.id}" class="accordion-collapse collapse ${index < 5 ? 'show' : ''}" aria-labelledby="heading${faq.id}">
+                        <div class="accordion-body">
+                            ${faq.answer}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function filterFaqs(query) {
+            if (!query) {
+                filteredFaqs = faqData;
+            } else {
+                filteredFaqs = faqData.filter(faq => 
+                    faq.question.toLowerCase().includes(query) ||
+                    faq.answer.toLowerCase().includes(query) ||
+                    faq.category.toLowerCase().includes(query)
+                );
+            }
+            renderFaqs(filteredFaqs);
+        }
+        
+        function filterByCategory(category) {
+            if (category === 'all') {
+                filteredFaqs = faqData;
+            } else {
+                filteredFaqs = faqData.filter(faq => faq.category === category);
+            }
+            renderFaqs(filteredFaqs);
+            
+            // Clear search input
+            const searchInput = document.getElementById('faq-search-input');
+            if (searchInput) searchInput.value = '';
+        }
+    </script>
+    
+    <!-- Floating Chatbot Button -->
+    <div id="chat-float-btn" class="chat-float-btn" onclick="document.getElementById('chat-popup').classList.add('active'); document.getElementById('chat-popup').style.display='flex';">💬</div>
+
+    <!-- Floating Chatbot Popup -->
+    <div id="chat-popup" class="chat-popup">
+        <div class="chat-popup-header">
+            <span>Chat with Assistant</span>
+            <button id="chat-close-btn" class="chat-close-btn" onclick="document.getElementById('chat-popup').classList.remove('active'); document.getElementById('chat-popup').style.display='none';">×</button>
+        </div>
+
+        <div id="chat-popup-box" class="chat-popup-box"></div>
+
+        <div class="chat-popup-input">
+            <input id="chat-popup-input" type="text" placeholder="Type message..." onkeypress="if(event.key==='Enter'){event.preventDefault();sendChatMessage();}" />
+            <button id="chat-popup-send" onclick="sendChatMessage();">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // Define fallback function immediately
+        function sendChatMessage() {
+            if (window.chatSendMessage && typeof window.chatSendMessage === 'function') {
+                window.chatSendMessage();
+            } else {
+                console.log('Chatbot not ready yet, please wait...');
+                // Try again in a moment
+                setTimeout(sendChatMessage, 100);
+            }
+        }
+    </script>
+    
+    <script src="chat_float.js"></script>
+</body>
+</html>

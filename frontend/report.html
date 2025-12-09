@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Scam - RuralAsist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/chatbot.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="main-content flex-grow-1">
+        <div class="content-wrapper">
+            <header class="page-header text-center mb-4">
+                <div class="d-inline-flex align-items-center justify-content-center mb-2" style="width:56px;height:56px;border-radius:14px;background: linear-gradient(135deg, #dc2626, #ef4444);box-shadow: 0 8px 20px rgba(220,38,38,0.25);">
+                    <i class="bi bi-shield-exclamation text-white" style="font-size: 24px;"></i>
+                </div>
+                <h1 class="h3 fw-bold mb-1" data-lang-en="Report a Scam" data-lang-hi="धोखाधड़ी रिपोर्ट करें">Report a Scam</h1>
+                <p class="text-muted mb-0" data-lang-en="Help protect the community by reporting suspicious calls, messages, or websites." data-lang-hi="संदिग्ध कॉल, संदेश या वेबसाइट की रिपोर्ट करके समुदाय की रक्षा करें।">Help protect the community by reporting suspicious calls, messages, or websites.</p>
+            </header>
+
+            <section id="report-form-section" class="card section-elevated mx-auto" style="max-width: 860px;">
+                <div class="card-body p-4 p-lg-5">
+                    <form id="reportForm">
+                        <div class="mb-4">
+                            <label for="scamDescription" class="form-label fw-semibold" data-lang-en="Describe the suspicious activity" data-lang-hi="संदिग्ध गतिविधि का वर्णन करें">Describe the suspicious activity</label>
+                            <textarea class="form-control" id="scamDescription" rows="5" required 
+                                      placeholder="Please describe what happened. Include any suspicious messages (SMS), calls, or website links. The more detail, the better!"></textarea>
+                        </div>
+                        
+                        <div class="d-flex gap-3 mb-4">
+                            <button type="submit" class="btn btn-primary btn-lg flex-grow-1">
+                                <i class="bi bi-search me-2"></i><span data-lang-en="Analyze & Report" data-lang-hi="विश्लेषण और रिपोर्ट">Analyze & Report</span>
+                            </button>
+                            <button type="button" id="reportClearBtn" class="btn btn-outline-secondary btn-lg">
+                                <i class="bi bi-x-lg"></i>
+                            </button>
+                        </div>
+
+                        <!-- Scam Analysis Card -->
+                        <div id="analysis-card" class="card analysis-card d-none mb-4">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <h5 class="card-title mb-0">
+                                        <i class="bi bi-cpu me-2"></i>Scam Analysis
+                                    </h5>
+                                    <span id="risk-badge" class="badge bg-secondary d-none">Risk</span>
+                                </div>
+                                <div id="analysis-spinner" class="text-center py-3 d-none">
+                                    <div class="spinner-border spinner-border-sm text-primary" role="status"></div>
+                                    <span class="ms-2">Analyzing text...</span>
+                                </div>
+                                <div id="analysis-result"></div>
+                            </div>
+                        </div>
+
+                        <h5 class="mt-5 mb-3 fw-semibold">
+                            <i class="bi bi-info-circle me-2 text-muted"></i><span data-lang-en="Additional Details (Optional)" data-lang-hi="अतिरिक्त विवरण (वैकल्पिक)">Additional Details (Optional)</span>
+                        </h5>
+                        <hr class="mb-4">
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="scamType" class="form-label" data-lang-en="Type of Scam" data-lang-hi="धोखाधड़ी का प्रकार">Type of Scam</label>
+                                <select class="form-select" id="scamType">
+                                    <option value="" selected disabled data-lang-en="Select a category" data-lang-hi="श्रेणी चुनें">Select a category</option>
+                                    <option value="phishing">Phishing</option>
+                                    <option value="fake_job">Fake Job Offer</option>
+                                    <option value="lottery">Lottery/Prize</option>
+                                    <option value="upi_fraud">UPI/Payment Fraud</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="location" class="form-label" data-lang-en="Location" data-lang-hi="स्थान">Location</label>
+                                <input type="text" class="form-control" id="location" placeholder="City or area">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="scamEvidence" class="form-label" data-lang-en="Upload Evidence" data-lang-hi="सबूत अपलोड करें">Upload Evidence</label>
+                            <input class="form-control" type="file" id="scamEvidence" accept="image/*,.pdf">
+                            <small class="form-text" data-lang-en="Screenshots, emails, or other documents (optional)" data-lang-hi="स्क्रीनशॉट, ईमेल, या अन्य दस्तावेज़ (वैकल्पिक)">Screenshots, emails, or other documents (optional)</small>
+                        </div>
+
+                        <div class="form-check mt-4">
+                            <input type="checkbox" class="form-check-input" id="anonymousCheck">
+                            <label class="form-check-label" for="anonymousCheck" data-lang-en="Submit this report anonymously" data-lang-hi="इस रिपोर्ट को गुमनाम रूप से सबमिट करें">Submit this report anonymously</label>
+                        </div>
+
+                    </form>
+
+                    <!-- Common Scams Section -->
+                    <div class="mt-5 pt-4 border-top">
+                        <h5 class="mb-3 fw-semibold">
+                            <i class="bi bi-exclamation-triangle me-2 text-warning"></i><span data-lang-en="Common Scams to Watch Out For" data-lang-hi="सावधान रहने योग्य आम धोखाधड़ी">Common Scams to Watch Out For</span>
+                        </h5>
+                        <div id="common-scams-section"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-2">
+                    <img src="1.png" alt="RuralAsist Logo" style="width:28px;height:28px;border-radius:6px;object-fit:cover;">
+                    <p class="mb-0 text-muted">&copy; 2025 RuralAsist | <span data-lang-en="Made in India" data-lang-hi="भারत में निर्मित">Made in India</span> 🇮🇳</p>
+                </div>
+                <div class="footer-links">
+                    <a href="about.html" data-lang-en="About" data-lang-hi="हमारे बारे में">About</a>
+                    <a href="privacy.html" data-lang-en="Privacy" data-lang-hi="गोपनीयता">Privacy</a>
+                    <a href="contact.html" data-lang-en="Contact" data-lang-hi="संपर्क">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/report.js"></script>
+    <script>
+        // Minor UX: clear form
+        document.addEventListener('DOMContentLoaded', ()=>{
+            const clearBtn = document.getElementById('reportClearBtn');
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+                    const d = document.getElementById('scamDescription');
+                    const t = document.getElementById('scamType');
+                    const l = document.getElementById('location');
+                    const f = document.getElementById('scamEvidence');
+                    const a = document.getElementById('anonymousCheck');
+                    if (d) d.value = '';
+                    if (t) t.value = '';
+                    if (l) l.value = '';
+                    if (f) f.value = '';
+                    if (a) a.checked = false;
+                    const card = document.getElementById('analysis-card');
+                    if (card) card.classList.add('d-none');
+                });
+            }
+        });
+    </script>
+    
+    <!-- Floating Chatbot Button -->
+    <div id="chat-float-btn" class="chat-float-btn" onclick="document.getElementById('chat-popup').classList.add('active'); document.getElementById('chat-popup').style.display='flex';">💬</div>
+
+    <!-- Floating Chatbot Popup -->
+    <div id="chat-popup" class="chat-popup">
+        <div class="chat-popup-header">
+            <span>Chat with Assistant</span>
+            <button id="chat-close-btn" class="chat-close-btn" onclick="document.getElementById('chat-popup').classList.remove('active'); document.getElementById('chat-popup').style.display='none';">×</button>
+        </div>
+        <div id="chat-popup-box" class="chat-popup-box"></div>
+        <div class="chat-popup-input">
+            <input id="chat-popup-input" type="text" placeholder="Type message..." onkeypress="if(event.key==='Enter'){event.preventDefault();window.chatSendMessage();}" />
+            <button id="chat-popup-send" onclick="window.chatSendMessage();">Send</button>
+        </div>
+    </div>
+
+    <script src="chat_float.js"></script>
+</body>
+</html>

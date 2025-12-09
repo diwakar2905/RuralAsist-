@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Schemes - RuralAsist</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Global Theme -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    
+    <style>
+        body {
+            background: var(--surface-light, #f8fafc);
+            min-height: 100vh;
+        }
+
+        .schemes-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        /* Header */
+        .schemes-header {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .schemes-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .schemes-header .header-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #34A853, #2E8E46);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            box-shadow: 0 6px 16px rgba(52, 168, 83, 0.25);
+        }
+
+        .schemes-header .header-icon i {
+            font-size: 24px;
+            color: white;
+        }
+
+        /* Status Indicators */
+        .status-bar {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .status-online {
+            background: rgba(16, 185, 129, 0.1);
+            color: #059669;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+
+        .status-offline {
+            background: rgba(239, 68, 68, 0.1);
+            color: #dc2626;
+            border: 1px solid rgba(239, 68, 68, 0.25);
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .status-dot.online {
+            background: #10B981;
+        }
+
+        .status-dot.offline {
+            background: #EF4444;
+        }
+
+        /* Search Bar */
+        .search-section {
+            margin-bottom: 32px;
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 14px 24px;
+            border: 2px solid rgba(0, 0, 0, 0.08);
+            border-radius: 50px;
+            font-size: 15px;
+            transition: all 0.2s ease;
+            font-family: 'Inter', sans-serif;
+            background: white;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #34A853;
+            box-shadow: 0 0 0 4px rgba(52, 168, 83, 0.1);
+        }
+
+        .search-btn {
+            background: linear-gradient(135deg, #34A853, #2E8E46);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(52, 168, 83, 0.25);
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 168, 83, 0.35);
+        }
+
+        /* Filter & Action Bar */
+        .filter-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn, .action-btn {
+            padding: 10px 18px;
+            border: 2px solid rgba(0, 0, 0, 0.08);
+            background: white;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover {
+            border-color: #34A853;
+            color: #34A853;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #34A853, #2E8E46);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba(52, 168, 83, 0.25);
+        }
+
+        .action-btn {
+            background: linear-gradient(135deg, #34A853, #2E8E46);
+            color: white;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(52, 168, 83, 0.25);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 168, 83, 0.35);
+        }
+
+        .action-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Schemes Grid */
+        .schemes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .scheme-card {
+            background: white;
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.04);
+            border-left: 4px solid #34A853;
+        }
+
+        .scheme-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+        }
+
+        .scheme-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .scheme-category {
+            display: inline-block;
+            background: rgba(52, 168, 83, 0.1);
+            color: #34A853;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .scheme-description {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .scheme-benefit {
+            background: rgba(52, 168, 83, 0.05);
+            padding: 16px;
+            border-left: 3px solid #34A853;
+            margin-bottom: 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #374151;
+        }
+
+        .scheme-benefit strong {
+            color: #34A853;
+        }
+
+        .scheme-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .tag {
+            background: #f3f4f6;
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .scheme-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            padding-top: 16px;
+            margin-top: 16px;
+        }
+
+        .apply-btn {
+            background: linear-gradient(135deg, #34A853, #2E8E46);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            gap: 6px;
+            align-items: center;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(52, 168, 83, 0.25);
+        }
+
+        .apply-btn:hover {
+            transform: scale(1.05);
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(52, 168, 83, 0.35);
+        }
+
+        .scheme-source {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .updated-badge {
+            background: rgba(245, 158, 11, 0.1);
+            color: #d97706;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 80px 24px;
+            color: #9ca3af;
+        }
+
+        .empty-state i {
+            font-size: 64px;
+            color: rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            display: none;
+            text-align: center;
+            padding: 48px;
+        }
+
+        .spinner.active {
+            display: block;
+        }
+
+        .spinner-border {
+            border: 4px solid rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #34A853;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Statistics */
+        .stats-box {
+            background: white;
+            padding: 16px 24px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .stats-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: #34A853;
+        }
+
+        .stats-label {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-top: 4px;
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            background: white;
+            padding: 20px 24px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            display: none;
+            z-index: 1000;
+            max-width: 320px;
+            animation: slideInRight 0.3s ease-out;
+        }
+
+        .notification.show {
+            display: block;
+        }
+
+        .notification.success {
+            border-left: 4px solid #10B981;
+            color: #059669;
+        }
+
+        .notification.error {
+            border-left: 4px solid #EF4444;
+            color: #dc2626;
+        }
+
+        .notification.info {
+            border-left: 4px solid #3B82F6;
+            color: #1e40af;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .schemes-grid {
+                grid-template-columns: 1fr;
+            }
+            .search-bar {
+                flex-direction: column;
+            }
+            .filter-bar {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar-placeholder"></div>
+    <main class="main-content flex-grow-1">
+    <div class="schemes-container content-wrapper">
+        <!-- Header -->
+        <div class="schemes-header">
+            <div class="header-icon">
+                <i class="bi bi-building"></i>
+            </div>
+            <h1 data-lang-en="Government Schemes" data-lang-hi="सरकारी योजनाएं">Government Schemes</h1>
+            <p class="text-muted mb-0" data-lang-en="Find and apply for schemes suitable for you" data-lang-hi="अपने लिए उपयुक्त योजनाएं खोजें और आवेदन करें">Find and apply for schemes suitable for you</p>
+            
+            <div class="status-bar">
+                <div class="status-indicator" id="onlineStatus">
+                    <span class="status-dot online"></span>
+                    <span id="statusText" data-lang-en="Checking connection..." data-lang-hi="कनेक्शन जांच रहे हैं...">Checking connection...</span>
+                </div>
+                <div class="stats-box" style="flex: 1; max-width: 150px;">
+                    <div class="stats-number" id="totalSchemes">0</div>
+                    <div class="stats-label" data-lang-en="Available Schemes" data-lang-hi="उपलब्ध योजनाएं">Available Schemes</div>
+                </div>
+            </div>
+            
+            <!-- Offline Message -->
+            <div class="alert alert-info mt-3 mb-0" id="offlineMessage" style="display: none; border-radius: 12px;">
+                <i class="bi bi-info-circle me-2"></i>
+                <strong data-lang-en="Offline Mode:" data-lang-hi="ऑफलाइन मोड:">Offline Mode:</strong> <span data-lang-en="Internet is not available. You are viewing schemes from your last update. Click &quot;Update&quot; when you reconnect to get the latest schemes." data-lang-hi="इंटरनेट उपलब्ध नहीं है। आप पिछले अपडेट की योजनाएं देख रहे हैं। नवीनतम योजनाएं प्राप्त करने के लिए पुनः कनेक्ट होने पर &quot;अपडेट&quot; पर क्लिक करें।">Internet is not available. You are viewing schemes from your last update. Click "Update" when you reconnect to get the latest schemes.</span>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-bar">
+                <input type="text" class="search-input" id="searchInput" 
+                       placeholder="Search schemes by name, category, or keyword..." data-lang-en-placeholder="Search schemes by name, category, or keyword..." data-lang-hi-placeholder="नाम, श्रेणी या कीवर्ड से योजनाएं खोजें...">
+                <button class="search-btn" id="searchBtn">
+                    <i class="bi bi-search"></i>
+                    <span data-lang-en="Search" data-lang-hi="खोजें">Search</span>
+                </button>
+                <button class="action-btn" id="updateBtn" title="Update schemes from online database">
+                    <i class="bi bi-arrow-clockwise"></i>
+                    <span data-lang-en="Update" data-lang-hi="अपडेट">Update</span>
+                </button>
+                <button class="action-btn" id="refreshBtn" style="background: linear-gradient(135deg, #6366f1, #4f46e5);" title="Clear cache and reload">
+                    <i class="bi bi-arrow-repeat"></i>
+                    <span data-lang-en="Refresh" data-lang-hi="रिफ्रेश">Refresh</span>
+                </button>
+            </div>
+
+            <!-- Filters -->
+            <div class="filter-bar" id="filterBar">
+                <button class="filter-btn active" data-filter="all" data-lang-en="All Categories" data-lang-hi="सभी श्रेणियां">All Categories</button>
+                <button class="filter-btn" data-filter="agriculture" data-lang-en="🌾 Agriculture" data-lang-hi="🌾 कृषि">🌾 Agriculture</button>
+                <button class="filter-btn" data-filter="education" data-lang-en="📚 Education" data-lang-hi="📚 शिक्षा">📚 Education</button>
+                <button class="filter-btn" data-filter="health" data-lang-en="🏥 Health" data-lang-hi="🏥 स्वास्थ्य">🏥 Health</button>
+                <button class="filter-btn" data-filter="housing" data-lang-en="🏠 Housing" data-lang-hi="🏠 आवास">🏠 Housing</button>
+                <button class="filter-btn" data-filter="employment" data-lang-en="💼 Employment" data-lang-hi="💼 रोजगार">💼 Employment</button>
+                <button class="filter-btn" data-filter="energy" data-lang-en="⚡ Energy" data-lang-hi="⚡ ऊर्जा">⚡ Energy</button>
+                <button class="filter-btn" data-filter="pension" data-lang-en="🧓 Pension" data-lang-hi="🧓 पेंशन">🧓 Pension</button>
+                <button class="filter-btn" data-filter="social_welfare" data-lang-en="🤝 Social Welfare" data-lang-hi="🤝 सामाजिक कल्याण">🤝 Social Welfare</button>
+            </div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="spinner" id="spinner">
+            <div class="spinner-border"></div>
+            <p class="mt-3 text-muted" data-lang-en="Loading schemes..." data-lang-hi="योजनाएं लोड हो रही हैं...">Loading schemes...</p>
+        </div>
+
+        <!-- Schemes Grid -->
+        <div class="schemes-grid" id="schemesGrid"></div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <i class="bi bi-search"></i>
+            <h3 data-lang-en="No schemes found" data-lang-hi="कोई योजना नहीं मिली">No schemes found</h3>
+            <p data-lang-en="Try adjusting your search or filters" data-lang-hi="अपनी खोज या फ़िल्टर को समायोजित करने का प्रयास करें">Try adjusting your search or filters</p>
+        </div>
+    </div>
+    </main>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Use unique variable names to avoid conflicts with config.js
+        const SCHEMES_BACKEND_URL = window.AppConfig?.API_BASE_URL || "https://rural-asist.onrender.com";
+        const SCHEMES_CACHE_KEY = "schemes_cache";
+        const SCHEMES_CACHE_TIME = 60 * 60 * 1000; // 1 hour
+        const SCHEMES_LANG_KEY = window.AppConfig?.STORAGE_KEYS?.LANGUAGE || 'ruralassist_language';
+
+        let allSchemes = [];
+        let isOnline = false;
+
+        // Get current language
+        function getCurrentLang() {
+            return localStorage.getItem(SCHEMES_LANG_KEY) || 'en';
+        }
+
+        // Translations for scheme cards
+        const schemeTexts = {
+            en: {
+                benefits: '💰 Benefits:',
+                apply: 'Apply',
+                updated: 'Updated',
+                live: '🌐 Live',
+                cached: '📱 Cached',
+                online: '🟢 Online - Live updates available',
+                offline: '🔴 Offline - Using cached data'
+            },
+            hi: {
+                benefits: '💰 लाभ:',
+                apply: 'आवेदन करें',
+                updated: 'अपडेट किया गया',
+                live: '🌐 लाइव',
+                cached: '📱 कैश्ड',
+                online: '🟢 ऑनलाइन - लाइव अपडेट उपलब्ध',
+                offline: '🔴 ऑफलाइन - कैश्ड डेटा का उपयोग'
+            }
+        };
+
+        // ============================================================
+        // Utility Functions
+        // ============================================================
+
+        function showNotification(message, type = "info") {
+            const notif = document.getElementById("notification");
+            notif.textContent = message;
+            notif.className = `notification show ${type}`;
+            setTimeout(() => notif.classList.remove("show"), 4000);
+        }
+
+        function checkOnlineStatus() {
+            console.log("Checking online status...");
+            fetch(`${SCHEMES_BACKEND_URL}/schemes/status`)
+                .then(res => {
+                    console.log("Status check response:", res.status);
+                    return res.json();
+                })
+                .then(data => {
+                    console.log("Status data received:", data);
+                    isOnline = data.status === "online";
+                    updateStatusIndicator();
+                    console.log("Online status set to:", isOnline);
+                })
+                .catch(error => {
+                    console.error("Status check failed:", error);
+                    isOnline = false;
+                    updateStatusIndicator();
+                });
+        }
+
+        function updateStatusIndicator() {
+            const statusEl = document.getElementById("onlineStatus");
+            const statusText = document.getElementById("statusText");
+            const dot = statusEl.querySelector(".status-dot");
+            const offlineMsg = document.getElementById("offlineMessage");
+            const lang = getCurrentLang();
+            const texts = schemeTexts[lang];
+            
+            if (isOnline) {
+                statusEl.className = "status-indicator status-online";
+                statusText.textContent = texts.online;
+                dot.className = "status-dot online";
+                document.getElementById("updateBtn").disabled = false;
+                if (offlineMsg) offlineMsg.style.display = "none";
+            } else {
+                statusEl.className = "status-indicator status-offline";
+                statusText.textContent = texts.offline;
+                dot.className = "status-dot offline";
+                document.getElementById("updateBtn").disabled = true;
+                if (offlineMsg) offlineMsg.style.display = "block";
+            }
+        }
+
+        // ============================================================
+        // Cache Management
+        // ============================================================
+
+        function getCachedSchemes() {
+            try {
+                const cached = localStorage.getItem(SCHEMES_CACHE_KEY);
+                if (!cached) return null;
+
+                const { schemes, timestamp } = JSON.parse(cached);
+                if (Date.now() - timestamp > SCHEMES_CACHE_TIME) {
+                    localStorage.removeItem(CACHE_KEY);
+                    return null;
+                }
+                return schemes;
+            } catch {
+                return null;
+            }
+        }
+
+        function setCachedSchemes(schemes) {
+            try {
+                localStorage.setItem(SCHEMES_CACHE_KEY, JSON.stringify({
+                    schemes,
+                    timestamp: Date.now()
+                }));
+            } catch {
+                console.warn("Failed to cache schemes");
+            }
+        }
+
+        // ============================================================
+        // Loading & Display
+        // ============================================================
+
+        async function loadSchemes() {
+            console.log("=== loadSchemes() started ===");
+            console.log("Loading schemes from:", `${SCHEMES_BACKEND_URL}/schemes/local`);
+            
+            // Show spinner
+            const spinner = document.getElementById("spinner");
+            const grid = document.getElementById("schemesGrid");
+            
+            if (spinner) spinner.classList.add("active");
+            if (grid) grid.innerHTML = "";
+
+            try {
+                // Skip cache for now to debug - Fetch directly from backend
+                console.log("Fetching fresh schemes from backend...");
+                const response = await fetch(`${SCHEMES_BACKEND_URL}/schemes/local`);
+                console.log("Response status:", response.status, response.statusText);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                console.log("Raw response data:", data);
+                console.log("Data type:", typeof data);
+                console.log("Data keys:", Object.keys(data));
+                
+                // Check if data has schemes property, otherwise use data directly if it's an array
+                if (data.schemes && Array.isArray(data.schemes)) {
+                    allSchemes = data.schemes;
+                } else if (Array.isArray(data)) {
+                    allSchemes = data;
+                } else {
+                    console.warn("Unexpected data structure:", data);
+                    allSchemes = [];
+                }
+                
+                console.log("Extracted schemes array:", allSchemes);
+                console.log("Total schemes loaded:", allSchemes.length);
+
+                // Always render, even if empty
+                renderSchemes(allSchemes);
+                
+                // Cache if successful
+                if (allSchemes.length > 0) {
+                    setCachedSchemes(allSchemes);
+                    console.log("Schemes cached successfully");
+                }
+                
+            } catch (error) {
+                console.error("=== ERROR in loadSchemes ===");
+                console.error("Error details:", error);
+                console.error("Error message:", error.message);
+                console.error("Error stack:", error.stack);
+                
+                showNotification(`❌ Failed to load schemes: ${error.message}`, "error");
+                const emptyState = document.getElementById("emptyState");
+                if (emptyState) emptyState.style.display = "block";
+                
+                // Show error in grid as well
+                if (grid) {
+                    grid.innerHTML = `
+                        <div class="col-12">
+                            <div class="alert alert-danger" role="alert">
+                                <h4 class="alert-heading">Failed to Load Schemes</h4>
+                                <p>Error: ${error.message}</p>
+                                <hr>
+                                <button class="btn btn-outline-danger" onclick="loadSchemes()">Try Again</button>
+                            </div>
+                        </div>
+                    `;
+                }
+            } finally {
+                if (spinner) spinner.classList.remove("active");
+                console.log("=== loadSchemes() completed ===");
+            }
+        }
+                            <p class="mb-0">Please check your internet connection and try refreshing the page.</p>
+                        </div>
+                    </div>
+                `;
+            } finally {
+                document.getElementById("spinner").classList.remove("active");
+            }
+        }
+
+        function renderSchemes(schemes) {
+            console.log("renderSchemes called with:", schemes ? schemes.length : 0, "schemes");
+            
+            const grid = document.getElementById("schemesGrid");
+            const emptyState = document.getElementById("emptyState");
+            const lang = getCurrentLang();
+            const texts = schemeTexts[lang];
+
+            if (!grid) {
+                console.error("schemesGrid element not found!");
+                return;
+            }
+
+            if (!schemes || schemes.length === 0) {
+                console.log("No schemes to render");
+                grid.innerHTML = "";
+                emptyState.style.display = "block";
+                document.getElementById("totalSchemes").textContent = "0";
+                return;
+            }
+
+            console.log("Rendering", schemes.length, "schemes to grid");
+            emptyState.style.display = "none";
+            document.getElementById("totalSchemes").textContent = schemes.length;
+
+            grid.innerHTML = schemes.map((scheme, index) => {
+                console.log(`Rendering scheme ${index + 1}:`, scheme.title);
+                return `
+                <div class="scheme-card" data-id="${scheme.id}">
+                    <div class="scheme-category">${formatCategory(scheme.category)}</div>
+                    <h3 class="scheme-title">${scheme.title}</h3>
+                    <p class="scheme-description">${scheme.description}</p>
+                    
+                    <div class="scheme-benefit">
+                        <strong>${texts.benefits}</strong><br>
+                        ${scheme.benefits ? scheme.benefits.substring(0, 100) + '...' : 'No benefits information available.'}
+                    </div>
+
+                    <div class="scheme-tags">
+                        ${(scheme.tags || []).slice(0, 2).map(tag => 
+                            `<span class="tag">${tag}</span>`
+                        ).join("")}
+                    </div>
+
+                    <div class="scheme-footer">
+                        <div>
+                            <small class="scheme-source">${scheme.source === "online" ? texts.live : texts.cached}</small>
+                            ${scheme.updated_at ? `<br><span class="updated-badge">${texts.updated}</span>` : ""}
+                        </div>
+                        <a href="${scheme.apply_link}" target="_blank" class="apply-btn">
+                            ${texts.apply} <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+            }).join("");
+            
+            console.log("Grid HTML updated, total cards:", grid.children.length);
+        }
+
+        function formatCategory(cat) {
+            const lang = getCurrentLang();
+            const categories = {
+                agriculture: { emoji: "🌾", en: "Agriculture", hi: "कृषि" },
+                education: { emoji: "📚", en: "Education", hi: "शिक्षा" },
+                health: { emoji: "🏥", en: "Health", hi: "स्वास्थ्य" },
+                housing: { emoji: "🏠", en: "Housing", hi: "आवास" },
+                employment: { emoji: "💼", en: "Employment", hi: "रोजगार" },
+                energy: { emoji: "⚡", en: "Energy", hi: "ऊर्जा" },
+                pension: { emoji: "🧓", en: "Pension", hi: "पेंशन" },
+                social_welfare: { emoji: "🤝", en: "Social Welfare", hi: "सामाजिक कल्याण" },
+                business: { emoji: "💼", en: "Business", hi: "व्यापार" },
+                banking: { emoji: "🏦", en: "Banking", hi: "बैंकिंग" },
+                infrastructure: { emoji: "📌", en: "Infrastructure", hi: "बुनियादी ढांचा" },
+                girl_child: { emoji: "👧", en: "Girl Child", hi: "बालिका" },
+                maternal_health: { emoji: "🤰", en: "Maternal Health", hi: "मातृ स्वास्थ्य" },
+                child_health: { emoji: "👶", en: "Child Health", hi: "बाल स्वास्थ्य" }
+            };
+            const catData = categories[cat] || { emoji: "📌", en: cat.charAt(0).toUpperCase() + cat.slice(1).replace("_", " "), hi: cat };
+            return catData.emoji + " " + (lang === 'hi' ? catData.hi : catData.en);
+        }
+
+        // ============================================================
+        // Search & Filter
+        // ============================================================
+
+        function searchSchemes() {
+            const query = document.getElementById("searchInput").value.trim().toLowerCase();
+            const activeFilter = document.querySelector(".filter-btn.active").dataset.filter;
+
+            if (!query && activeFilter === "all") {
+                renderSchemes(allSchemes);
+                return;
+            }
+
+            let filtered = allSchemes;
+
+            // Apply category filter
+            if (activeFilter !== "all") {
+                filtered = filtered.filter(s => s.category === activeFilter);
+            }
+
+            // Apply search query
+            if (query) {
+                filtered = filtered.filter(scheme => {
+                    const searchText = `
+                        ${scheme.title} ${scheme.description} ${scheme.category}
+                        ${(scheme.keywords || []).join(" ")}
+                    `.toLowerCase();
+                    return searchText.includes(query);
+                });
+            }
+
+            renderSchemes(filtered);
+        }
+
+        // ============================================================
+        // Update Schemes
+        // ============================================================
+
+        async function updateSchemes() {
+            if (!isOnline) {
+                showNotification("❌ No internet connection", "error");
+                return;
+            }
+
+            const btn = document.getElementById("updateBtn");
+            btn.disabled = true;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Updating...';
+
+            try {
+                const response = await fetch(`${SCHEMES_BACKEND_URL}/schemes/update`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ query: "scheme", limit: 50 })
+                });
+
+                if (!response.ok) throw new Error("Update failed");
+
+                const data = await response.json();
+                showNotification(`🎉 ${data.message}`, "success");
+
+                // Reload schemes
+                localStorage.removeItem(CACHE_KEY);
+                loadSchemes();
+            } catch (error) {
+                console.error("Error updating schemes:", error);
+                showNotification("❌ Failed to update schemes", "error");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            }
+        }
+
+        // ============================================================
+        // Event Listeners
+        // ============================================================
+
+        document.getElementById("searchBtn").addEventListener("click", searchSchemes);
+        document.getElementById("searchInput").addEventListener("keypress", e => {
+            if (e.key === "Enter") searchSchemes();
+        });
+
+        document.getElementById("updateBtn").addEventListener("click", updateSchemes);
+        
+        // Refresh button - clears cache and reloads
+        document.getElementById("refreshBtn").addEventListener("click", () => {
+            localStorage.removeItem(CACHE_KEY);
+            showNotification("🔄 Cache cleared! Reloading...", "info");
+            loadSchemes();
+        });
+
+        document.querySelectorAll(".filter-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                searchSchemes();
+            });
+        });
+
+        // ============================================================
+        // Initialize
+        // ============================================================
+
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("DOM Content Loaded - Initializing schemes page");
+            console.log("Backend URL:", SCHEMES_BACKEND_URL);
+            console.log("Checking for required elements...");
+            
+            const grid = document.getElementById("schemesGrid");
+            const spinner = document.getElementById("spinner");
+            const emptyState = document.getElementById("emptyState");
+            
+            console.log("schemesGrid found:", !!grid);
+            console.log("spinner found:", !!spinner);
+            console.log("emptyState found:", !!emptyState);
+            
+            if (!grid) {
+                console.error("Critical error: schemesGrid element not found!");
+                return;
+            }
+            
+            console.log("Starting initialization...");
+            checkOnlineStatus();
+            
+            // Load schemes with a small delay to ensure everything is ready
+            setTimeout(() => {
+                console.log("Loading schemes after delay...");
+                loadSchemes();
+            }, 100);
+            
+            // Periodically check online status
+            setInterval(checkOnlineStatus, 30000);
+        });
+
+        // Also try loading on window load as backup
+        window.addEventListener("load", () => {
+            console.log("Window loaded - backup scheme loading");
+            if (allSchemes.length === 0) {
+                console.log("No schemes loaded yet, trying again...");
+                setTimeout(loadSchemes, 200);
+            }
+        });
+
+        // Listen for online/offline events
+        window.addEventListener("online", () => {
+            isOnline = true;
+            updateStatusIndicator();
+            showNotification("🟢 Back online!", "success");
+        });
+
+        window.addEventListener("offline", () => {
+            isOnline = false;
+            updateStatusIndicator();
+            showNotification("🔴 You are offline", "error");
+        });
+    </script>
+    
+    <!-- Floating Chatbot Button -->
+    <div id="chat-float-btn" class="chat-float-btn" onclick="document.getElementById('chat-popup').classList.add('active'); document.getElementById('chat-popup').style.display='flex';">💬</div>
+
+    <!-- Floating Chatbot Popup -->
+    <div id="chat-popup" class="chat-popup">
+        <div class="chat-popup-header">
+            <span>Chat with Assistant</span>
+            <button id="chat-close-btn" class="chat-close-btn" onclick="document.getElementById('chat-popup').classList.remove('active'); document.getElementById('chat-popup').style.display='none';">×</button>
+        </div>
+        <div id="chat-popup-box" class="chat-popup-box"></div>
+        <div class="chat-popup-input">
+            <input id="chat-popup-input" type="text" placeholder="Type message..." onkeypress="if(event.key==='Enter'){event.preventDefault();window.chatSendMessage();}" />
+            <button id="chat-popup-send" onclick="window.chatSendMessage();">Send</button>
+        </div>
+    </div>
+
+    <script src="chat_float.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-2">
+                    <img src="1.png" alt="RuralAsist Logo" style="width:28px;height:28px;border-radius:6px;object-fit:cover;">
+                    <p class="mb-0 text-muted">&copy; 2025 RuralAsist | <span data-lang-en="Made in India" data-lang-hi="भারत में निर्मित">Made in India</span> 🇮🇳</p>
+                </div>
+                <div class="footer-links">
+                    <a href="about.html" data-lang-en="About" data-lang-hi="हमारे बारे में">About</a>
+                    <a href="privacy.html" data-lang-en="Privacy" data-lang-hi="गोपनीयता">Privacy</a>
+                    <a href="contact.html" data-lang-en="Contact" data-lang-hi="संपर्क">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

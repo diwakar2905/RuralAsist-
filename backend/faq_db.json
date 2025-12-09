@@ -1,0 +1,452 @@
+[
+  {
+    "id": "faq_001",
+    "category": "schemes",
+    "question": "What is PM-Kisan scheme?",
+    "answer": "PM-Kisan provides ₹6,000 yearly support to farmers in three equal installments of ₹2,000 each, directly transferred to their bank accounts.",
+    "keywords": ["pm kisan", "farmer", "income support", "agriculture"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_002",
+    "category": "schemes",
+    "question": "Can I apply for multiple schemes at the same time?",
+    "answer": "Yes, you can apply for multiple schemes if you meet the eligibility criteria for each. There is no restriction on applying to several schemes simultaneously.",
+    "keywords": ["multiple schemes", "apply", "eligibility"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_003",
+    "category": "schemes",
+    "question": "How do I check my scheme application status?",
+    "answer": "Visit the official portal of the scheme and use your registered mobile number, Aadhaar, or application ID to track your status online.",
+    "keywords": ["status", "application status", "check", "track"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_004",
+    "category": "schemes",
+    "question": "What documents are required for most government schemes?",
+    "answer": "Common documents include Aadhaar card, bank passbook, income certificate, caste certificate, address proof, and sometimes land records.",
+    "keywords": ["documents", "requirements", "aadhaar", "income certificate"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_005",
+    "category": "schemes",
+    "question": "Are government schemes free to apply?",
+    "answer": "Yes, applying for any official government scheme is completely free. Never pay anyone to apply for government schemes.",
+    "keywords": ["free", "charges", "apply", "cost"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_006",
+    "category": "schemes",
+    "question": "How long does it take for scheme approval?",
+    "answer": "Approval time varies by scheme but generally takes 7 to 45 days. Some schemes may take longer depending on verification requirements.",
+    "keywords": ["approval time", "scheme duration", "processing", "days"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_007",
+    "category": "schemes",
+    "question": "What to do if my scheme application is rejected?",
+    "answer": "Check the rejection reason online, update missing documents or fix errors, and reapply if allowed. Contact the helpline for more information.",
+    "keywords": ["rejected", "error", "fix application", "reapply"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_008",
+    "category": "schemes",
+    "question": "Do I need an Aadhaar card for all schemes?",
+    "answer": "Most central government schemes require Aadhaar, but some state schemes may accept alternative IDs like voter ID or driving license.",
+    "keywords": ["aadhaar", "id proof", "requirements", "voter id"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_009",
+    "category": "schemes",
+    "question": "How can I find schemes I am eligible for?",
+    "answer": "Use RuralAssist's scheme finder by selecting your age, gender, income, occupation, and category to see matching government schemes.",
+    "keywords": ["eligible", "find schemes", "scheme finder", "matching"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_010",
+    "category": "schemes",
+    "question": "Can senior citizens apply for pension schemes online?",
+    "answer": "Yes, schemes like PMVVY (Pradhan Mantri Vaya Vandana Yojana) and NSAP (National Social Assistance Programme) support online applications.",
+    "keywords": ["pension", "senior citizen", "apply online", "pmvvy"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_011",
+    "category": "ocr",
+    "question": "What file formats are supported for OCR?",
+    "answer": "You can upload JPG, PNG, and PDF files up to 10MB. Clear images provide the best OCR results.",
+    "keywords": ["ocr", "formats", "jpg", "pdf", "png"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_012",
+    "category": "ocr",
+    "question": "How accurate is OCR text extraction?",
+    "answer": "Accuracy depends on image quality. Clear, well-lit images of printed text achieve 90-98% accuracy. Poor quality images have lower accuracy.",
+    "keywords": ["accuracy", "ocr quality", "clear image", "printed"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_013",
+    "category": "ocr",
+    "question": "Can OCR read handwritten text?",
+    "answer": "Basic handwriting works but with lower accuracy. Printed text is recognized with the highest accuracy. Neat handwriting works better than messy writing.",
+    "keywords": ["handwriting", "printed", "ocr", "text"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_014",
+    "category": "ocr",
+    "question": "Is my uploaded document stored?",
+    "answer": "No, all OCR files are deleted immediately after processing for your privacy and security. We do not store any documents.",
+    "keywords": ["privacy", "delete", "storage", "secure"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_015",
+    "category": "ocr",
+    "question": "Can I upload multiple documents?",
+    "answer": "Yes, you can process multiple documents one by one. Simply upload the next document after the previous one is processed.",
+    "keywords": ["multi upload", "multiple files", "ocr", "batch"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_016",
+    "category": "scam",
+    "question": "How do I identify a phishing scam?",
+    "answer": "Look for suspicious links, poor grammar, urgent language, typos, requests for passwords or OTP, and sender email addresses that look fake.",
+    "keywords": ["phishing", "scam", "identify", "fake"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_017",
+    "category": "scam",
+    "question": "What should I do if someone asks for my OTP?",
+    "answer": "Never share your OTP with anyone. No legitimate bank or government agency will ever ask for your OTP. If asked, it's definitely a scam.",
+    "keywords": ["otp", "fraud", "scam", "never share"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_018",
+    "category": "scam",
+    "question": "How can I report a scam?",
+    "answer": "You can report scams on RuralAssist's 'Report Scam' page or visit cybercrime.gov.in for official complaint filing with Indian authorities.",
+    "keywords": ["report", "fraud", "cybercrime", "complaint"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_019",
+    "category": "scam",
+    "question": "What is UPI fraud?",
+    "answer": "Fraudsters trick users into approving unauthorized payment requests or sharing OTP, causing money loss from UPI accounts.",
+    "keywords": ["upi", "fraud", "payment scam", "money"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_020",
+    "category": "scam",
+    "question": "How can I stay safe from scam calls?",
+    "answer": "Avoid unknown callers asking for personal details, OTP, passwords, or money transfers. Hang up and verify independently through official channels.",
+    "keywords": ["calls", "scam call", "fraud safety", "unknown"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_021",
+    "category": "general",
+    "question": "Is RuralAssist free to use?",
+    "answer": "Yes, RuralAssist is completely free for all users. No charges or subscriptions required.",
+    "keywords": ["free", "charge", "cost", "premium"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_022",
+    "category": "general",
+    "question": "Do I need to create an account?",
+    "answer": "No account is required for browsing schemes and FAQ. However, email OTP login is required to access advanced features like OCR and scam reporting.",
+    "keywords": ["account", "login", "registration"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_023",
+    "category": "scam",
+    "question": "How do scammers steal bank information?",
+    "answer": "They use fake links, OTP theft, screen-sharing apps, phishing websites, and malware to trick you into revealing bank credentials.",
+    "keywords": ["bank scam", "steal", "fraud", "credentials"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_024",
+    "category": "scam",
+    "question": "What is a KYC scam?",
+    "answer": "Fraudsters pretend to be bank officials asking for OTP or Aadhaar to supposedly 'update KYC'. This is always a scam - banks never ask for OTP.",
+    "keywords": ["kyc update", "fraud", "verification", "bank"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_025",
+    "category": "general",
+    "question": "Which languages does RuralAssist support?",
+    "answer": "Currently English and Hindi. The chatbot and all features support both languages. More languages coming soon.",
+    "keywords": ["languages", "hindi", "english", "support"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_026",
+    "category": "schemes",
+    "question": "Do students have dedicated scholarship schemes?",
+    "answer": "Yes, you can apply for NSP (National Scholarship Portal) scholarships and state-specific student programs. Check RuralAssist's schemes section.",
+    "keywords": ["nsp", "student", "scholarship", "education"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_027",
+    "category": "general",
+    "question": "Is my data secure on RuralAssist?",
+    "answer": "Yes, we do not store uploaded documents. All data follows strict privacy standards and is encrypted where applicable.",
+    "keywords": ["data secure", "privacy", "safe", "encrypted"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_028",
+    "category": "ocr",
+    "question": "How can I improve OCR accuracy?",
+    "answer": "Upload well-lit, high-quality pictures. Avoid blur, shadows, and skewed images. Use good lighting and hold documents flat.",
+    "keywords": ["ocr accuracy", "improve", "quality", "lighting"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_029",
+    "category": "scam",
+    "question": "What are common signs of a scam?",
+    "answer": "Look for urgency, unknown links, requests for money, threats of account suspension, poor grammar, and unrealistic offers.",
+    "keywords": ["signs", "scam signs", "fraud indicators", "warning"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_030",
+    "category": "scam",
+    "question": "What is SIM swap fraud?",
+    "answer": "Scammers trick telecom companies into duplicating your SIM card, giving them access to your phone number, OTP, and bank accounts.",
+    "keywords": ["sim swap", "fraud", "otp theft", "telecom"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_031",
+    "category": "schemes",
+    "question": "What is Ayushman Bharat scheme?",
+    "answer": "Ayushman Bharat provides health insurance up to ₹5 lakh per family per year for treatment at government and private hospitals.",
+    "keywords": ["ayushman bharat", "health", "insurance", "pmjay"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_032",
+    "category": "schemes",
+    "question": "How to apply for Pradhan Mantri Awas Yojana?",
+    "answer": "Visit pmaymis.gov.in, register with your mobile number, provide Aadhaar and bank details. Eligible EWS/LIG/MIG can get subsidized housing loans.",
+    "keywords": ["pmay", "housing", "awas", "home loan"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_033",
+    "category": "schemes",
+    "question": "What is MGNREGA?",
+    "answer": "MGNREGA guarantees 100 days of wage employment per year to rural households. Adults can work on community projects at minimum wage.",
+    "keywords": ["mgnrega", "employment", "rural", "wage"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_034",
+    "category": "schemes",
+    "question": "How to check Atal Pension Yojana (APY) balance?",
+    "answer": "Visit the official APY website with your Aadhaar number or phone number linked to your account to check balance and contribution history.",
+    "keywords": ["apy", "atal pension", "balance", "retirement"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_035",
+    "category": "schemes",
+    "question": "What is Sukanya Samriddhi Yojana (SSY)?",
+    "answer": "SSY is a savings scheme for girls under 10 years offering 7.6% interest annually. Maximum ₹1.5 lakh can be invested per year.",
+    "keywords": ["ssy", "girl child", "savings", "education"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_036",
+    "category": "ocr",
+    "question": "What if OCR fails to extract text?",
+    "answer": "Poor image quality is usually the cause. Try uploading a clearer, better-lit photo. Check if the document is readable before uploading.",
+    "keywords": ["ocr fails", "error", "extraction", "quality"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_037",
+    "category": "ocr",
+    "question": "Can I extract text from a mobile phone screenshot?",
+    "answer": "Yes, screenshots work well with OCR. Just ensure the text in the screenshot is clear and readable.",
+    "keywords": ["screenshot", "mobile", "extract", "text"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_038",
+    "category": "scam",
+    "question": "What is a lottery scam?",
+    "answer": "Scammers claim you won a lottery you never entered, asking for registration fees or bank details to collect fake prizes.",
+    "keywords": ["lottery scam", "prize", "fake", "fees"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_039",
+    "category": "scam",
+    "question": "How to protect yourself from social engineering?",
+    "answer": "Never share personal info with strangers, verify caller identity independently, don't click unknown links, and trust your instincts.",
+    "keywords": ["social engineering", "protect", "stranger", "identity"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_040",
+    "category": "general",
+    "question": "What is the chatbot for?",
+    "answer": "The AI chatbot helps you find schemes, understand scam prevention, learn about OCR usage, and answers general questions about RuralAssist.",
+    "keywords": ["chatbot", "ai", "help", "assistant"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_041",
+    "category": "general",
+    "question": "Can I use RuralAssist offline?",
+    "answer": "Yes, schemes page works offline with cached data. Chatbot also works offline. OCR and scam reporting require internet for API calls.",
+    "keywords": ["offline", "internet", "cache", "work"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_042",
+    "category": "schemes",
+    "question": "How to apply for Mudra Loan?",
+    "answer": "Visit pmmy.gov.in or contact a bank/NBFC. Mudra loans up to ₹10 lakh are available for self-employed and entrepreneurs without collateral.",
+    "keywords": ["mudra", "loan", "business", "self-employed"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_043",
+    "category": "schemes",
+    "question": "What is PM Ujjwala Yojana?",
+    "answer": "PM Ujjwala provides free LPG connections to below-poverty-line households. First refill and safety equipment are provided free.",
+    "keywords": ["ujjwala", "lpg", "cooking", "free"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_044",
+    "category": "scam",
+    "question": "How to recognize fake government official calls?",
+    "answer": "Real officials won't ask for OTP, passwords, or threaten account closure. They won't call asking for money. Always hang up and verify independently.",
+    "keywords": ["government", "official", "fake call", "threat"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_045",
+    "category": "ocr",
+    "question": "Is OCR available in multiple languages?",
+    "answer": "Currently, OCR primarily supports English text. We're working on adding Hindi and regional language support soon.",
+    "keywords": ["ocr", "languages", "english", "hindi"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_046",
+    "category": "general",
+    "question": "How do I contact RuralAssist support?",
+    "answer": "Use the FAQ section for common questions. For issues, report through the Scam Report page or contact via the website contact form.",
+    "keywords": ["support", "contact", "help", "issue"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_047",
+    "category": "schemes",
+    "question": "What is DigiLocker?",
+    "answer": "DigiLocker is a government service to store and share digital documents like Aadhaar, driving license, and certificates electronically.",
+    "keywords": ["digilocker", "documents", "digital", "certificate"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_048",
+    "category": "scam",
+    "question": "What is a tech support scam?",
+    "answer": "Scammers show fake pop-ups claiming virus detection, asking you to call a number or install software. Don't click - it's always fraud.",
+    "keywords": ["tech support", "virus", "scam", "popup"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_049",
+    "category": "schemes",
+    "question": "Can I apply for schemes from my mobile phone?",
+    "answer": "Yes, RuralAssist is fully mobile-responsive. You can browse schemes and apply from any smartphone via the website.",
+    "keywords": ["mobile", "phone", "apply", "responsive"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  },
+  {
+    "id": "faq_050",
+    "category": "general",
+    "question": "Who created RuralAssist and why?",
+    "answer": "RuralAssist is developed to empower rural communities by providing easy access to government schemes, digital tools, and fraud protection.",
+    "keywords": ["ruralassist", "founder", "mission", "rural"],
+    "helpful_count": 0,
+    "unhelpful_count": 0
+  }
+]

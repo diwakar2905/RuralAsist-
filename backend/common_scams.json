@@ -1,0 +1,259 @@
+[
+  {
+    "id": "scam_001",
+    "title": "Phishing Scam",
+    "icon": "🎣",
+    "description": "Scammers send fake emails or SMS pretending to be banks, government agencies, or companies to steal personal information.",
+    "warning_signs": [
+      "Unknown email/sender address",
+      "Urgent message: 'Your account will be blocked'",
+      "Poor spelling or grammar",
+      "Fake link disguised as official website",
+      "Requests for OTP, password, PAN or Aadhaar"
+    ],
+    "protection_tips": [
+      "Never click on unknown links",
+      "Manually open websites instead of using message links",
+      "Verify the sender's email address",
+      "Enable 2-factor authentication"
+    ],
+    "if_scammed": [
+      "Change passwords immediately",
+      "Inform your bank",
+      "Report at cybercrime.gov.in",
+      "Monitor suspicious transactions"
+    ],
+    "examples": [
+      "Email: 'Your SBI account will be suspended. Verify now: sb1-ver1fy.com'",
+      "SMS: 'Update KYC or your UPI will be blocked'"
+    ]
+  },
+  {
+    "id": "scam_002",
+    "title": "UPI Payment Fraud",
+    "icon": "💳",
+    "description": "Scammers trick users into approving pull-payment requests or sharing OTP to steal money via UPI.",
+    "warning_signs": [
+      "Unknown person sending 'collect request'",
+      "Caller pretending to be from bank asking for OTP",
+      "Requests for screen sharing",
+      "Asking for remote access apps like AnyDesk/TeamViewer"
+    ],
+    "protection_tips": [
+      "Never approve unknown UPI requests",
+      "Never share OTP or PIN with anyone",
+      "Disable auto-debit features",
+      "Use only official UPI apps"
+    ],
+    "if_scammed": [
+      "Raise complaint through bank customer care",
+      "Contact your UPI app support immediately",
+      "File a complaint on cybercrime.gov.in"
+    ],
+    "examples": [
+      "UPI payment request for ₹1 claiming 'verification fees'",
+      "Fake customer care asking to 'reverse payment' using OTP"
+    ]
+  },
+  {
+    "id": "scam_003",
+    "title": "Fake Job Offer Scam",
+    "icon": "💼",
+    "description": "Fraudsters offer unrealistic job opportunities requiring upfront payment for registration or training.",
+    "warning_signs": [
+      "No interview required",
+      "Unrealistic salary without experience",
+      "Asking money for training or joining",
+      "Poor spelling in job letter"
+    ],
+    "protection_tips": [
+      "Verify job postings on official websites",
+      "Never pay for job interviews or joining",
+      "Research the company online",
+      "Check official email domain (example@company.com)"
+    ],
+    "if_scammed": [
+      "Stop communication",
+      "Report to job portal",
+      "File FIR with local police"
+    ],
+    "examples": [
+      "'Work from home and earn ₹40,000/day'",
+      "'Pay ₹999 registration fee to get offer letter'"
+    ]
+  },
+  {
+    "id": "scam_004",
+    "title": "Lottery & Prize Scam",
+    "icon": "🎁",
+    "description": "Scammers claim you won a prize or lottery but ask for a fee to release the amount.",
+    "warning_signs": [
+      "You never participated in a contest",
+      "Asking for tax/processing fee",
+      "Large winning amount claims",
+      "Foreign lotteries in email"
+    ],
+    "protection_tips": [
+      "Never pay to receive a prize",
+      "Ignore unknown messages",
+      "Report suspicious emails"
+    ],
+    "if_scammed": [
+      "Block scammer number",
+      "Report to cybercrime.gov.in"
+    ],
+    "examples": [
+      "'Congratulations! You won ₹25 lakh'",
+      "'Pay ₹2,000 processing fee to claim prize'"
+    ]
+  },
+  {
+    "id": "scam_005",
+    "title": "KYC Update Scam",
+    "icon": "🪪",
+    "description": "Fraudsters impersonate banks and ask users to update KYC or risk account closure.",
+    "warning_signs": [
+      "'Your account will be frozen'",
+      "Requests to share Aadhaar/PAN/OTP",
+      "Fake bank helpline numbers",
+      "Links to unofficial websites"
+    ],
+    "protection_tips": [
+      "Only update KYC on official websites",
+      "Never share OTP with anyone",
+      "Call bank official numbers from website"
+    ],
+    "if_scammed": [
+      "Block your card/UPI ID",
+      "Update passwords",
+      "Visit your bank immediately"
+    ],
+    "examples": [
+      "SMS: 'KYC expired, update now or account will be blocked!'"
+    ]
+  },
+  {
+    "id": "scam_006",
+    "title": "Investment Fraud",
+    "icon": "📈",
+    "description": "Scammers lure users into fake investment plans with guaranteed high returns.",
+    "warning_signs": [
+      "Guarantee of 2x/3x returns",
+      "No company registration details",
+      "Pressure to invest quickly",
+      "No risk disclosures"
+    ],
+    "protection_tips": [
+      "Avoid pressure-driven investment schemes",
+      "Verify SEBI registration",
+      "Research company background",
+      "Ask for written documents"
+    ],
+    "if_scammed": [
+      "Gather screenshots and proofs",
+      "Report to SEBI and cybercrime.gov.in"
+    ],
+    "examples": [
+      "'Invest ₹10,000 and get ₹50,000 in 7 days'",
+      "'Crypto investment guaranteed profit'"
+    ]
+  },
+  {
+    "id": "scam_007",
+    "title": "Fake Government Official Scam",
+    "icon": "🏛️",
+    "description": "Scammers impersonate government officials to extract money or personal details.",
+    "warning_signs": [
+      "Demanding money for scheme approval",
+      "Asking for Aadhaar/PAN for verification",
+      "Threatening legal action",
+      "Fake ID cards over WhatsApp"
+    ],
+    "protection_tips": [
+      "Government officials never ask for money",
+      "Verify with district office/helpline",
+      "Ignore threats of 'legal action'"
+    ],
+    "if_scammed": [
+      "Report immediately to local police",
+      "Submit complaint at cybercrime.gov.in"
+    ],
+    "examples": [
+      "'Pay ₹1,500 to process your PMAY application'"
+    ]
+  },
+  {
+    "id": "scam_008",
+    "title": "Loan App Scam",
+    "icon": "📱",
+    "description": "Illegal mobile apps offer instant loans and then blackmail users using their contacts/photos.",
+    "warning_signs": [
+      "App not on Play Store",
+      "High processing fee",
+      "Threats or abusive messages",
+      "Access asked to contacts and gallery"
+    ],
+    "protection_tips": [
+      "Use only RBI-approved loan apps",
+      "Deny unnecessary permissions",
+      "Research loan apps before use"
+    ],
+    "if_scammed": [
+      "Uninstall the app",
+      "Report to RBI and cybercrime.gov.in"
+    ],
+    "examples": [
+      "'Instant loan ₹10,000 — processing fee ₹2,000 upfront'"
+    ]
+  },
+  {
+    "id": "scam_009",
+    "title": "Online Shopping Fraud",
+    "icon": "🛒",
+    "description": "Fake shopping websites or sellers take payments but never deliver items.",
+    "warning_signs": [
+      "No return or refund policy",
+      "Prices too low to be real",
+      "Only UPI/prepaid payments",
+      "No customer support number"
+    ],
+    "protection_tips": [
+      "Use COD wherever possible",
+      "Check website reviews",
+      "Avoid buying from unknown Instagram sellers"
+    ],
+    "if_scammed": [
+      "Raise dispute with bank/UPI app",
+      "Report fake page",
+      "File complaint on cybercrime.gov.in"
+    ],
+    "examples": [
+      "'iPhone 15 for ₹15,000 — today only!'"
+    ]
+  },
+  {
+    "id": "scam_010",
+    "title": "Dating & Romance Scam",
+    "icon": "❤️‍🩹",
+    "description": "Scammers build emotional trust online and later request money or personal info.",
+    "warning_signs": [
+      "Avoiding video calls",
+      "Asking for money for emergencies",
+      "Quick emotional attachment",
+      "Profile looks fake or stolen"
+    ],
+    "protection_tips": [
+      "Never send money to online strangers",
+      "Verify identity before trust",
+      "Do not share personal photos"
+    ],
+    "if_scammed": [
+      "Block the scammer",
+      "Report profile to platform",
+      "File cybersecurity complaint"
+    ],
+    "examples": [
+      "'I love you, please send ₹5,000 — my mother is in hospital'"
+    ]
+  }
+]

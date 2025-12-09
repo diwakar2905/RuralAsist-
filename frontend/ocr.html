@@ -1,0 +1,108 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Scanner - RuralAsist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/chatbot.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script>pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js`;</script>
+</head>
+<body>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="main-content flex-grow-1">
+        <div class="content-wrapper">
+            <header class="page-header text-center mb-4">
+                <div class="d-inline-flex align-items-center justify-content-center mb-2" style="width:56px;height:56px;border-radius:14px;background: linear-gradient(135deg, #2E8E46, #34A853);box-shadow: 0 8px 20px rgba(52,168,83,0.25);">
+                    <i class="bi bi-file-earmark-text text-white" style="font-size: 24px;"></i>
+                </div>
+                <h1 class="h3 fw-bold mb-1" data-lang-en="Document Scanner" data-lang-hi="दस्तावेज़ स्कैनर">Document Scanner</h1>
+                <p class="text-muted mb-0" data-lang-en="Extract text from images and PDF documents instantly" data-lang-hi="तस्वीरों और PDF दस्तावेज़ों से तुरंत टेक्स्ट निकालें">Extract text from images and PDF documents instantly</p>
+            </header>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card section-elevated">
+                        <div class="card-body p-4">
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold" data-lang-en="Upload Document" data-lang-hi="दस्तावेज़ अपलोड करें">Upload Document</label>
+                                <input type="file" id="ocr-file" class="form-control form-control-lg" accept=".jpg,.jpeg,.png,.pdf">
+                                <small class="form-text" data-lang-en="Supported formats: JPG, PNG, PDF" data-lang-hi="समर्थित प्रारूप: JPG, PNG, PDF">Supported formats: JPG, PNG, PDF</small>
+                            </div>
+
+                            <button id="ocr-btn" class="btn btn-primary btn-lg w-100 mb-3">
+                                <i class="bi bi-search me-2"></i><span data-lang-en="Extract Text" data-lang-hi="टेक्स्ट निकालें">Extract Text</span>
+                            </button>
+
+                            <div id="ocr-loader" class="ocr-loader text-center py-3" style="display:none;">
+                                <div class="spinner-border spinner-border-sm text-primary me-2" role="status"></div>
+                                <span>Extracting text from document...</span>
+                            </div>
+
+                            <div class="mt-4">
+                                <label class="form-label fw-semibold" data-lang-en="Extracted Text" data-lang-hi="निकाला गया टेक्स्ट">Extracted Text</label>
+                                <textarea id="ocr-output" class="ocr-output form-control" placeholder="Extracted text will appear here..." rows="10"></textarea>
+                            </div>
+
+                            <button id="copy-btn" class="btn btn-outline-secondary mt-3">
+                                <i class="bi bi-clipboard me-2"></i><span data-lang-en="Copy Text" data-lang-hi="टेक्स्ट कॉपी करें">Copy Text</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-2">
+                    <img src="1.png" alt="RuralAsist Logo" style="width:28px;height:28px;border-radius:6px;object-fit:cover;">
+                    <p class="mb-0 text-muted">&copy; 2025 RuralAsist | <span data-lang-en="Made in India" data-lang-hi="भारत में निर्मित">Made in India</span> 🇮🇳</p>
+                </div>
+                <div class="footer-links">
+                    <a href="about.html" data-lang-en="About" data-lang-hi="हमारे बारे में">About</a>
+                    <a href="privacy.html" data-lang-en="Privacy" data-lang-hi="गोपनीयता">Privacy</a>
+                    <a href="contact.html" data-lang-en="Contact" data-lang-hi="संपर्क">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/ocr.js"></script>
+ 
+    <!-- Floating Chatbot Button -->
+    <div id="chat-float-btn" class="chat-float-btn" onclick="document.getElementById('chat-popup').classList.add('active'); document.getElementById('chat-popup').style.display='flex';">💬</div>
+
+    <!-- Floating Chatbot Popup -->
+    <div id="chat-popup" class="chat-popup">
+        <div class="chat-popup-header">
+            <span>Chat with Assistant</span>
+            <button id="chat-close-btn" class="chat-close-btn" onclick="document.getElementById('chat-popup').classList.remove('active'); document.getElementById('chat-popup').style.display='none';">×</button>
+        </div>
+        <div id="chat-popup-box" class="chat-popup-box"></div>
+        <div class="chat-popup-input">
+            <input id="chat-popup-input" type="text" placeholder="Type message..." onkeypress="if(event.key==='Enter'){event.preventDefault();window.chatSendMessage();}" />
+            <button id="chat-popup-send" onclick="window.chatSendMessage();">Send</button>
+        </div>
+    </div>
+
+    <script src="chat_float.js"></script>
+</body>
+</html>

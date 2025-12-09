@@ -1,0 +1,41 @@
+{
+  "diwakarmishra2905@gmail.com": [
+    {
+      "type": "chatbot",
+      "description": "Asked: \"namaste\"",
+      "timestamp": "2025-12-02T05:56:32.810407"
+    },
+    {
+      "type": "chatbot",
+      "description": "Asked: \"namaste\"",
+      "timestamp": "2025-12-02T06:09:04.744916"
+    },
+    {
+      "type": "chatbot",
+      "description": "Asked: \"namaste\"",
+      "timestamp": "2025-12-02T06:09:08.424730"
+    },
+    {
+      "type": "chatbot",
+      "description": "Asked: \"namaste\"",
+      "timestamp": "2025-12-02T06:09:23.870887"
+    },
+    {
+      "type": "login",
+      "description": "Logged in via OTP",
+      "timestamp": "2025-12-02T07:54:37.516070"
+    },
+    {
+      "type": "login",
+      "description": "Logged in via OTP",
+      "timestamp": "2025-12-02T07:56:31.809154"
+    }
+  ],
+  "akshatroli176@gmail.com": [
+    {
+      "type": "login",
+      "description": "Logged in via OTP",
+      "timestamp": "2025-12-02T07:56:12.899840"
+    }
+  ]
+}

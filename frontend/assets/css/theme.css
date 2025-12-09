@@ -1,0 +1,832 @@
+/* ============================================================
+   RURALASSIST - GLOBAL DESIGN SYSTEM & THEME
+   ============================================================
+   
+   This file contains:
+   - Brand color variables
+   - Typography system
+   - Component styles
+   - Button styles
+   - Card styles
+   - Shadow system
+   - Background gradients
+   - Animations
+   - Reusable utilities
+   
+============================================================ */
+
+/* ============================================================
+   1. ROOT VARIABLES & COLOR SYSTEM
+============================================================ */
+
+:root {
+    /* Primary Brand Colors */
+    --brand-primary: #34A853;      /* Green */
+    --brand-secondary: #2E8E46;    /* Dark Green */
+    --brand-accent: #FBC02D;       /* Yellow */
+    
+    /* Neutral Colors */
+    --text-dark: #111827;          /* Almost black */
+    --text-muted: #1F2937;         /* Dark grey */
+    --text-secondary: #6B7280;     /* Medium grey */
+    --text-light: #9CA3AF;         /* Light grey */
+    
+    /* Surface Colors */
+    --surface: #FFFFFF;            /* White */
+    --surface-soft: rgba(255,255,255,0.65);  /* Soft white */
+    --surface-alt: #F8FAFC;        /* Very light blue */
+    --surface-light: #F3F4F6;      /* Light grey background */
+    
+    /* Semantic Colors */
+    --success: #10B981;
+    --warning: #F59E0B;
+    --error: #EF4444;
+    --info: #3B82F6;
+    
+    /* Shadow System */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 10px 25px rgba(2, 6, 23, 0.12);
+    --shadow-lg: 0 20px 40px rgba(2, 6, 23, 0.18);
+    --shadow-xl: 0 25px 50px rgba(2, 6, 23, 0.25);
+    
+    /* Spacing System (8px base) */
+    --space-xs: 0.25rem;      /* 4px */
+    --space-sm: 0.5rem;       /* 8px */
+    --space-md: 1rem;         /* 16px */
+    --space-lg: 1.5rem;       /* 24px */
+    --space-xl: 2rem;         /* 32px */
+    --space-2xl: 3rem;        /* 48px */
+    --space-3xl: 4rem;        /* 64px */
+    
+    /* Typography */
+    --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-size-xs: 0.75rem;   /* 12px */
+    --font-size-sm: 0.875rem;  /* 14px */
+    --font-size-base: 1rem;    /* 16px */
+    --font-size-lg: 1.125rem;  /* 18px */
+    --font-size-xl: 1.25rem;   /* 20px */
+    --font-size-2xl: 1.5rem;   /* 24px */
+    --font-size-3xl: 1.875rem; /* 30px */
+    --font-size-4xl: 2.25rem;  /* 36px */
+    
+    /* Border Radius */
+    --radius-xs: 0.25rem;      /* 4px */
+    --radius-sm: 0.375rem;     /* 6px */
+    --radius-md: 0.5rem;       /* 8px */
+    --radius-lg: 1rem;         /* 16px */
+    --radius-xl: 1.5rem;       /* 24px */
+    --radius-2xl: 2rem;        /* 32px */
+    --radius-full: 9999px;     /* Fully rounded */
+    
+    /* Transitions */
+    --transition-fast: 150ms ease-in-out;
+    --transition-base: 300ms ease-in-out;
+    --transition-slow: 500ms ease-in-out;
+}
+
+/* ============================================================
+   2. GLOBAL TYPOGRAPHY & BASE STYLES
+============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--text-muted);
+    background: var(--surface);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Scale */
+h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+h5 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+h6 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+p {
+    margin-bottom: var(--space-md);
+    color: var(--text-secondary);
+}
+
+p.lead {
+    font-size: var(--font-size-lg);
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+small {
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+}
+
+a {
+    color: var(--brand-primary);
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+a:hover {
+    color: var(--brand-secondary);
+    text-decoration: none;
+}
+
+/* ============================================================
+   3. BUTTON STYLES
+============================================================ */
+
+.btn, button {
+    font-family: var(--font-family-primary);
+    font-weight: 600;
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-base);
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    text-decoration: none;
+}
+
+/* Primary Button - Green Gradient */
+.btn-primary {
+    background: linear-gradient(135deg, var(--brand-secondary), var(--brand-primary));
+    color: white;
+    padding: 12px 24px;
+    font-size: var(--font-size-base);
+    box-shadow: 0 10px 20px rgba(52, 168, 83, 0.25);
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(79, 70, 229, 0.28);
+    filter: brightness(1.02);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-primary.btn-lg {
+    padding: 14px 32px;
+    font-size: var(--font-size-lg);
+}
+
+.btn-primary.btn-sm {
+    padding: 8px 16px;
+    font-size: var(--font-size-sm);
+}
+
+/* Outline Secondary Button */
+.btn-outline-secondary {
+    color: #111827;
+    border-color: rgba(17, 24, 39, 0.2);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: saturate(140%) blur(6px);
+    -webkit-backdrop-filter: saturate(140%) blur(6px);
+    padding: 12px 24px;
+    font-size: var(--font-size-base);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
+}
+
+.btn-outline-secondary:hover {
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(17, 24, 39, 0.08);
+    transform: translateY(-2px);
+    color: #111827;
+    text-decoration: none;
+}
+
+.btn-outline-secondary.btn-lg {
+    padding: 14px 32px;
+    font-size: var(--font-size-lg);
+}
+
+.btn-outline-secondary.btn-sm {
+    padding: 8px 16px;
+    font-size: var(--font-size-sm);
+}
+
+/* Success Button */
+.btn-success {
+    background: var(--success);
+    color: white;
+    padding: 12px 24px;
+    font-size: var(--font-size-base);
+}
+
+.btn-success:hover {
+    background: #059669;
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* Disabled State */
+.btn:disabled, button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* ============================================================
+   4. CARD STYLES
+============================================================ */
+
+.card {
+    background: var(--surface);
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(79, 70, 229, 0.35);
+}
+
+.card-body {
+    padding: var(--space-xl);
+}
+
+.card-header {
+    padding: var(--space-xl);
+    background: var(--surface-light);
+    border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.card-footer {
+    padding: var(--space-xl);
+    background: var(--surface-light);
+    border-top: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+/* Feature Card - Special styling */
+.feature-card {
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+    padding: var(--space-xl);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(79, 70, 229, 0.35);
+}
+
+.feature-card .feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(135deg, var(--brand-secondary), #2E8E46);
+    box-shadow: 0 10px 20px rgba(52, 168, 83, 0.25);
+    margin-bottom: var(--space-md);
+    font-size: 24px;
+}
+
+.feature-card .card-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+}
+
+.feature-card .card-text {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    flex: 1;
+    margin-bottom: var(--space-md);
+}
+
+/* Scheme Card */
+.scheme-card {
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    border-left: 4px solid var(--brand-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+    padding: var(--space-xl);
+    background: var(--surface);
+}
+
+.scheme-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(79, 70, 229, 0.35);
+}
+
+/* Stat Item */
+.stat-item {
+    background: var(--surface-soft);
+    border: 1px solid rgba(79, 70, 229, 0.15);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    text-align: center;
+}
+
+.stat-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-item i {
+    font-size: 28px;
+    color: var(--brand-primary);
+    margin-bottom: var(--space-md);
+}
+
+.stat-item h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+}
+
+.stat-item p {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   5. SECTION TITLE COMPONENT
+============================================================ */
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: var(--space-lg);
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 80px;
+    margin: 12px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--brand-secondary), var(--brand-primary));
+}
+
+.section-title.text-center {
+    width: 100%;
+    text-align: center;
+}
+
+.section-title.text-center::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================================
+   6. BACKGROUND & GRADIENT STYLES
+============================================================ */
+
+/* Light Alternative Background */
+.bg-light-alt {
+    background:
+        radial-gradient(600px 600px at 5% 10%, rgba(79, 70, 229, 0.07), transparent 40%),
+        radial-gradient(500px 500px at 95% 0%, rgba(20, 184, 166, 0.08), transparent 40%),
+        #f8fafc;
+}
+
+/* Hero Section Background */
+.hero-section {
+    position: relative;
+    background:
+        radial-gradient(900px 900px at -10% 0%, rgba(52, 168, 83, 0.08), transparent 40%),
+        radial-gradient(800px 800px at 110% 10%, rgba(251, 192, 45, 0.10), transparent 45%);
+    padding: var(--space-3xl) 0;
+}
+
+.hero-section h1 {
+    background: linear-gradient(90deg, var(--brand-secondary), var(--brand-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Soft Badge Helpers */
+.bg-success-soft {
+    background: rgba(16, 185, 129, 0.12) !important;
+    color: #059669 !important;
+}
+
+.bg-primary-soft {
+    background: rgba(59, 130, 246, 0.12) !important;
+    color: #2563eb !important;
+}
+
+.bg-warning-soft {
+    background: rgba(245, 158, 11, 0.12) !important;
+    color: #d97706 !important;
+}
+
+.bg-danger-soft {
+    background: rgba(239, 68, 68, 0.12) !important;
+    color: #dc2626 !important;
+}
+
+/* ============================================================
+   7. CONTAINER & LAYOUT UTILITIES
+============================================================ */
+
+.container-fluid {
+    width: 100%;
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 576px) {
+    .container-fluid {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-fluid {
+        max-width: 720px;
+        padding-left: var(--space-lg);
+        padding-right: var(--space-lg);
+    }
+}
+
+@media (min-width: 992px) {
+    .container-fluid {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-fluid {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container-fluid {
+        max-width: 1320px;
+    }
+}
+
+/* ============================================================
+   8. CAROUSEL & MEDIA STYLES
+============================================================ */
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 6px;
+    transition: transform var(--transition-base), background-color var(--transition-base);
+}
+
+.carousel-indicators .active {
+    background-color: #fff;
+    transform: scale(1.15);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hero Carousel */
+.hero-carousel {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-carousel .carousel-inner,
+.hero-carousel .carousel-item {
+    height: 100%;
+}
+
+.hero-carousel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.0) 40%);
+    pointer-events: none;
+}
+
+/* ============================================================
+   9. FOOTER STYLES
+============================================================ */
+
+.footer {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.00));
+    border-top: 1px solid rgba(17, 24, 39, 0.06);
+    padding: var(--space-2xl) 0;
+    margin-top: var(--space-3xl);
+}
+
+.footer-links {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    transition: color var(--transition-base);
+}
+
+.footer-links a:hover {
+    color: var(--brand-primary);
+}
+
+/* ============================================================
+   10. BADGE & LABEL STYLES
+============================================================ */
+
+.badge {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    display: inline-block;
+}
+
+.badge-primary {
+    background: var(--brand-primary);
+    color: white;
+}
+
+.badge-secondary {
+    background: var(--brand-secondary);
+    color: white;
+}
+
+.badge-accent {
+    background: var(--brand-accent);
+    color: #333;
+}
+
+.badge-success {
+    background: var(--success);
+    color: white;
+}
+
+.badge-warning {
+    background: var(--warning);
+    color: white;
+}
+
+.badge-danger {
+    background: var(--error);
+    color: white;
+}
+
+/* ============================================================
+   11. ANIMATION STYLES
+============================================================ */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+}
+
+.animate-slide-down {
+    animation: slideDown 0.3s ease-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* ============================================================
+   12. UTILITY CLASSES
+============================================================ */
+
+/* Spacing Utilities */
+.mt-0 { margin-top: 0 !important; }
+.mt-1 { margin-top: var(--space-sm) !important; }
+.mt-2 { margin-top: var(--space-md) !important; }
+.mt-3 { margin-top: var(--space-lg) !important; }
+.mt-4 { margin-top: var(--space-xl) !important; }
+.mt-5 { margin-top: var(--space-2xl) !important; }
+
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: var(--space-sm) !important; }
+.mb-2 { margin-bottom: var(--space-md) !important; }
+.mb-3 { margin-bottom: var(--space-lg) !important; }
+.mb-4 { margin-bottom: var(--space-xl) !important; }
+.mb-5 { margin-bottom: var(--space-2xl) !important; }
+
+.gap-1 { gap: var(--space-sm) !important; }
+.gap-2 { gap: var(--space-md) !important; }
+.gap-3 { gap: var(--space-lg) !important; }
+.gap-4 { gap: var(--space-xl) !important; }
+
+/* Text Utilities */
+.text-primary { color: var(--brand-primary); }
+.text-secondary { color: var(--brand-secondary); }
+.text-accent { color: var(--brand-accent); }
+.text-muted { color: var(--text-muted); }
+.text-light { color: var(--text-light); }
+
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.font-medium { font-weight: 500; }
+
+/* Display & Visibility */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+
+/* ============================================================
+   13. RESPONSIVE MEDIA QUERIES
+============================================================ */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .btn-lg {
+        padding: 12px 24px !important;
+        font-size: var(--font-size-base) !important;
+    }
+    
+    .card-body,
+    .card-header,
+    .card-footer {
+        padding: var(--space-lg);
+    }
+    
+    .stat-item {
+        padding: var(--space-lg);
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    .section-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .card-body,
+    .card-header,
+    .card-footer {
+        padding: var(--space-md);
+    }
+}

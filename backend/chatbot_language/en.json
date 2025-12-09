@@ -1,0 +1,61 @@
+{
+  "intents": {
+    "greeting": {
+      "keywords": ["hello", "hi", "namaste", "hey", "greetings", "good morning", "good afternoon", "howdy", "welcome", "hii", "hiii", "helo", "sup", "yo", "start"],
+      "response": "Namaste! 🙏 Welcome to RuralAssist. I'm here to help you with:\n\n🏛️ Government Schemes & Benefits\n📄 Document Scanning (OCR)\n🛡️ Scam Prevention & Reporting\n\nWhat would you like to know about today?"
+    },
+    "schemes": {
+      "keywords": ["scheme", "yojana", "pm kisan", "farmer", "agriculture", "pension", "subsidy", "benefit", "government", "central", "state", "welfare", "modi", "pradhan mantri", "jan dhan", "ujjwala", "awas", "housing", "loan", "mudra", "ayushman", "pmjay", "scholarship", "education"],
+      "response": "🏛️ Government Schemes Guide\n\nPopular schemes you can explore:\n\n🌾 Agriculture:\n• PM Kisan - ₹6,000/year for farmers\n• PM Fasal Bima - Crop insurance\n\n🏥 Health:\n• Ayushman Bharat - ₹5 lakh health cover\n• Jan Aushadhi - Affordable medicines\n\n🏠 Housing:\n• PM Awas Yojana - Affordable homes\n\n💰 Financial:\n• Jan Dhan - Zero balance accounts\n• Mudra Loan - Business loans up to ₹10 lakh\n\n👉 Visit our Schemes page to check eligibility and apply!"
+    },
+    "pmkisan": {
+      "keywords": ["pm kisan", "kisan samman", "farmer money", "6000", "kisaan", "kisan yojana"],
+      "response": "🌾 PM Kisan Samman Nidhi\n\n💰 Benefit: ₹6,000 per year (₹2,000 every 4 months)\n\n✅ Eligibility:\n• Small & marginal farmers\n• Must have land records\n• Aadhaar linked bank account\n\n📝 How to Apply:\n1. Visit pmkisan.gov.in\n2. Click 'New Farmer Registration'\n3. Enter Aadhaar & mobile number\n4. Complete land details\n\n📞 Helpline: 155261"
+    },
+    "ayushman": {
+      "keywords": ["ayushman", "pmjay", "health insurance", "hospital", "medical", "treatment", "5 lakh", "health card"],
+      "response": "🏥 Ayushman Bharat (PM-JAY)\n\n💰 Benefit: ₹5 lakh health coverage per family/year\n\n✅ Eligibility:\n• Based on SECC 2011 data\n• BPL families\n• Vulnerable groups\n\n🔍 Check eligibility:\n1. Visit pmjay.gov.in\n2. Enter mobile/Aadhaar\n3. Check if your name is listed\n\n🏥 Use at 20,000+ empaneled hospitals\n📞 Helpline: 14555"
+    },
+    "ocr": {
+      "keywords": ["scan", "ocr", "extract", "text", "aadhaar", "aadhar", "pan", "document", "bill", "pdf", "image", "photo", "camera", "scanner", "read document"],
+      "response": "📄 Document Scanner (OCR)\n\nExtract text from any document instantly!\n\n✅ Supported Documents:\n• Aadhaar Card\n• PAN Card\n• Bank Statements\n• Bills & Receipts\n• Land Records\n• Medical Reports\n• Any image or PDF\n\n📝 How to use:\n1. Go to OCR page\n2. Upload image/PDF (max 10MB)\n3. Click 'Extract Text'\n4. Copy the extracted text!\n\n💡 Tip: Use clear, well-lit images for best results."
+    },
+    "scam": {
+      "keywords": ["fraud", "scam", "suspicious", "call", "otp", "bank", "phishing", "fake", "unsafe", "dangerous", "cheat", "money lost", "upi", "lottery", "prize", "winner", "hacked"],
+      "response": "🛡️ Scam Alert & Protection Guide\n\n🚨 Common Scams:\n• Fake lottery/prize calls\n• OTP theft for UPI fraud\n• Phishing links via SMS\n• Fake government officials\n• Job offer scams\n\n❌ NEVER share:\n• OTP or PIN\n• Bank account details\n• Aadhaar/PAN numbers on call\n\n✅ Stay Safe:\n• Verify caller identity\n• Don't click unknown links\n• Report suspicious activity\n\n📢 Use our 'Report Scam' page to analyze suspicious messages!"
+    },
+    "report": {
+      "keywords": ["report", "complain", "complaint", "cyber crime", "police", "help fraud", "report scam"],
+      "response": "📢 How to Report Scam/Fraud\n\n🔴 On RuralAssist:\n1. Go to 'Report Scam' page\n2. Paste the suspicious message/number\n3. Our AI will analyze risk level\n4. Get safety recommendations\n\n🔴 Official Channels:\n• Cyber Crime Portal: cybercrime.gov.in\n• Helpline: 1930 (24x7)\n• Local Police Station\n• Bank's fraud helpline\n\n⏰ Report quickly - within 24 hours for best recovery chances!"
+    },
+    "digilocker": {
+      "keywords": ["digilocker", "digital locker", "digital document", "online document", "certificate", "digi locker"],
+      "response": "📱 DigiLocker - Your Digital Documents\n\n✅ Benefits:\n• Store all documents digitally\n• Legally valid certificates\n• Access anytime, anywhere\n• No physical copies needed\n\n📝 How to Start:\n1. Download DigiLocker app\n2. Sign up with Aadhaar/mobile\n3. Link documents automatically\n4. Share securely when needed\n\n📄 Available Documents:\n• Driving License\n• Vehicle Registration\n• Education Certificates\n• PAN Card & more!"
+    },
+    "navigation": {
+      "keywords": ["where", "page", "open", "go to", "how to", "navigate", "guide", "steps", "use", "website", "menu"],
+      "response": "🗺️ RuralAssist Navigation\n\n📍 Main Pages:\n\n🏠 HOME - Dashboard & overview\n📋 SCHEMES - Browse government schemes\n📄 OCR - Scan documents\n🛡️ REPORT SCAM - Analyze suspicious content\n👤 PROFILE - Your account & activity\n\n💡 Quick Tips:\n• Use the search bar on Schemes page\n• Filter by category (Agriculture, Health, etc.)\n• Chat with me anytime using the 💬 button!\n\nWhat would you like to explore?"
+    },
+    "help": {
+      "keywords": ["help", "guide", "support", "confused", "don't know", "assist", "what can you do", "capabilities", "feature", "features"],
+      "response": "🤝 How Can I Help You?\n\nI'm your RuralAssist assistant! Here's what I can do:\n\n1️⃣ Find Government Schemes\n   Ask: 'PM Kisan benefits' or 'health schemes'\n\n2️⃣ Document Scanning Help\n   Ask: 'How to scan Aadhaar' or 'OCR guide'\n\n3️⃣ Scam Protection\n   Ask: 'Is this OTP call safe' or 'report fraud'\n\n4️⃣ Platform Navigation\n   Ask: 'Where to find schemes' or 'how to use'\n\n💬 Just type your question in English or Hindi!"
+    },
+    "thanks": {
+      "keywords": ["thank", "thanks", "thankyou", "thank you", "thx", "appreciated", "helpful", "great", "awesome", "nice"],
+      "response": "😊 You're welcome! Happy to help!\n\nFeel free to ask if you have more questions about:\n• Government schemes\n• Document scanning\n• Scam protection\n\nStay safe and stay informed! 🙏"
+    },
+    "bye": {
+      "keywords": ["bye", "goodbye", "see you", "later", "exit", "close", "quit", "done"],
+      "response": "👋 Goodbye! Take care!\n\nRemember:\n✅ Check schemes you're eligible for\n✅ Never share OTP with anyone\n✅ Visit us again for any help\n\n🙏 Dhanyavaad! Have a great day!"
+    },
+    "eligibility": {
+      "keywords": ["eligible", "eligibility", "qualify", "can i apply", "am i eligible", "criteria", "requirement"],
+      "response": "📋 Eligibility Check Guide\n\nTo check if you're eligible for any scheme:\n\n1️⃣ Go to our Schemes page\n2️⃣ Select the scheme you're interested in\n3️⃣ Check the eligibility criteria listed\n4️⃣ Apply if you meet the requirements\n\n📌 Common Eligibility Factors:\n• Age limit\n• Income limit (BPL/APL)\n• Category (SC/ST/OBC/General)\n• Location (Rural/Urban)\n• Occupation\n\nTell me which scheme you want to check!"
+    },
+    "unknown": {
+      "keywords": [],
+      "response": "🤔 I'm not sure I understood that.\n\nI can help you with:\n• 🏛️ Government Schemes - 'PM Kisan', 'Ayushman'\n• 📄 Document Scanning - 'How to scan', 'OCR'\n• 🛡️ Scam Protection - 'Is this safe', 'Report fraud'\n• 🗺️ Navigation - 'Where to find', 'How to use'\n\nTry asking something like:\n'What is PM Kisan scheme?'\n'How to scan my Aadhaar?'\n'Is lottery SMS real?'"
+    }
+  }
+}
+

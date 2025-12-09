@@ -1,0 +1,1448 @@
+{
+  "high_risk": [
+    {
+      "keyword": "otp",
+      "patterns": [
+        ".*otp.*",
+        "otp",
+        "(?i)otp"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "verify",
+      "patterns": [
+        ".*verify.*",
+        "verify",
+        "(?i)verify"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "account blocked",
+      "patterns": [
+        ".*account blocked.*",
+        "account.*blocked",
+        "(?i)account blocked"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "kyc update",
+      "patterns": [
+        ".*kyc update.*",
+        "kyc.*update",
+        "(?i)kyc update"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "bank alert",
+      "patterns": [
+        ".*bank alert.*",
+        "bank.*alert",
+        "(?i)bank alert"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "urgent action",
+      "patterns": [
+        ".*urgent action.*",
+        "urgent.*action",
+        "(?i)urgent action"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "confirm password",
+      "patterns": [
+        ".*confirm password.*",
+        "confirm.*password",
+        "(?i)confirm password"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "suspended account",
+      "patterns": [
+        ".*suspended account.*",
+        "suspended.*account",
+        "(?i)suspended account"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "payment request",
+      "patterns": [
+        ".*payment request.*",
+        "payment.*request",
+        "(?i)payment request"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "refund scam",
+      "patterns": [
+        ".*refund scam.*",
+        "refund.*scam",
+        "(?i)refund scam"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "fraud alert",
+      "patterns": [
+        ".*fraud alert.*",
+        "fraud.*alert",
+        "(?i)fraud alert"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "unauthorized access",
+      "patterns": [
+        ".*unauthorized access.*",
+        "unauthorized.*access",
+        "(?i)unauthorized access"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "winning prize",
+      "patterns": [
+        ".*winning prize.*",
+        "winning.*prize",
+        "(?i)winning prize"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "lottery",
+      "patterns": [
+        ".*lottery.*",
+        "lottery",
+        "(?i)lottery"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "investment offer",
+      "patterns": [
+        ".*investment offer.*",
+        "investment.*offer",
+        "(?i)investment offer"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "crypto double",
+      "patterns": [
+        ".*crypto double.*",
+        "crypto.*double",
+        "(?i)crypto double"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "double your money",
+      "patterns": [
+        ".*double your money.*",
+        "double.*your.*money",
+        "(?i)double your money"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "instant profit",
+      "patterns": [
+        ".*instant profit.*",
+        "instant.*profit",
+        "(?i)instant profit"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "install app",
+      "patterns": [
+        ".*install app.*",
+        "install.*app",
+        "(?i)install app"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "remote access",
+      "patterns": [
+        ".*remote access.*",
+        "remote.*access",
+        "(?i)remote access"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "anydesk",
+      "patterns": [
+        ".*anydesk.*",
+        "anydesk",
+        "(?i)anydesk"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "teamviewer",
+      "patterns": [
+        ".*teamviewer.*",
+        "teamviewer",
+        "(?i)teamviewer"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "free gift",
+      "patterns": [
+        ".*free gift.*",
+        "free.*gift",
+        "(?i)free gift"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "bank freeze",
+      "patterns": [
+        ".*bank freeze.*",
+        "bank.*freeze",
+        "(?i)bank freeze"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "update now",
+      "patterns": [
+        ".*update now.*",
+        "update.*now",
+        "(?i)update now"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "verify identity",
+      "patterns": [
+        ".*verify identity.*",
+        "verify.*identity",
+        "(?i)verify identity"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "credentials required",
+      "patterns": [
+        ".*credentials required.*",
+        "credentials.*required",
+        "(?i)credentials required"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "validate card",
+      "patterns": [
+        ".*validate card.*",
+        "validate.*card",
+        "(?i)validate card"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "atm blocked",
+      "patterns": [
+        ".*atm blocked.*",
+        "atm.*blocked",
+        "(?i)atm blocked"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "card deactivated",
+      "patterns": [
+        ".*card deactivated.*",
+        "card.*deactivated",
+        "(?i)card deactivated"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "upi collect",
+      "patterns": [
+        ".*upi collect.*",
+        "upi.*collect",
+        "(?i)upi collect"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "upi request",
+      "patterns": [
+        ".*upi request.*",
+        "upi.*request",
+        "(?i)upi request"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "emergency transfer",
+      "patterns": [
+        ".*emergency transfer.*",
+        "emergency.*transfer",
+        "(?i)emergency transfer"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "threat call",
+      "patterns": [
+        ".*threat call.*",
+        "threat.*call",
+        "(?i)threat call"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "legal notice fake",
+      "patterns": [
+        ".*legal notice fake.*",
+        "legal.*notice.*fake",
+        "(?i)legal notice fake"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "police verification",
+      "patterns": [
+        ".*police verification.*",
+        "police.*verification",
+        "(?i)police verification"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "customs parcel",
+      "patterns": [
+        ".*customs parcel.*",
+        "customs.*parcel",
+        "(?i)customs parcel"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "facebook hack",
+      "patterns": [
+        ".*facebook hack.*",
+        "facebook.*hack",
+        "(?i)facebook hack"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "instagram verification",
+      "patterns": [
+        ".*instagram verification.*",
+        "instagram.*verification",
+        "(?i)instagram verification"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "social media login",
+      "patterns": [
+        ".*social media login.*",
+        "social.*media.*login",
+        "(?i)social media login"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "adhar update",
+      "patterns": [
+        ".*adhar update.*",
+        "adhar.*update",
+        "(?i)adhar update"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "pan update",
+      "patterns": [
+        ".*pan update.*",
+        "pan.*update",
+        "(?i)pan update"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "income tax alert",
+      "patterns": [
+        ".*income tax alert.*",
+        "income.*tax.*alert",
+        "(?i)income tax alert"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "refund due",
+      "patterns": [
+        ".*refund due.*",
+        "refund.*due",
+        "(?i)refund due"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "sbi alert",
+      "patterns": [
+        ".*sbi alert.*",
+        "sbi.*alert",
+        "(?i)sbi alert"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "hdfc alert",
+      "patterns": [
+        ".*hdfc alert.*",
+        "hdfc.*alert",
+        "(?i)hdfc alert"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "icici alert",
+      "patterns": [
+        ".*icici alert.*",
+        "icici.*alert",
+        "(?i)icici alert"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "loan approval",
+      "patterns": [
+        ".*loan approval.*",
+        "loan.*approval",
+        "(?i)loan approval"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "cashback scam",
+      "patterns": [
+        ".*cashback scam.*",
+        "cashback.*scam",
+        "(?i)cashback scam"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "qr scan",
+      "patterns": [
+        ".*qr scan.*",
+        "qr.*scan",
+        "(?i)qr scan"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "scan to receive",
+      "patterns": [
+        ".*scan to receive.*",
+        "scan.*to.*receive",
+        "(?i)scan to receive"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "scan payment",
+      "patterns": [
+        ".*scan payment.*",
+        "scan.*payment",
+        "(?i)scan payment"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "free recharge",
+      "patterns": [
+        ".*free recharge.*",
+        "free.*recharge",
+        "(?i)free recharge"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "mobile tower scam",
+      "patterns": [
+        ".*mobile tower scam.*",
+        "mobile.*tower.*scam",
+        "(?i)mobile tower scam"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "job scam",
+      "patterns": [
+        ".*job scam.*",
+        "job.*scam",
+        "(?i)job scam"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "verification officer",
+      "patterns": [
+        ".*verification officer.*",
+        "verification.*officer",
+        "(?i)verification officer"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "government grant",
+      "patterns": [
+        ".*government grant.*",
+        "government.*grant",
+        "(?i)government grant"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "unlock account",
+      "patterns": [
+        ".*unlock account.*",
+        "unlock.*account",
+        "(?i)unlock account"
+      ],
+      "risk_score": 85,
+      "reason": "Auto-generated based on scam category"
+    }
+  ],
+  "medium_risk": [
+    {
+      "keyword": "investment",
+      "patterns": [
+        ".*investment.*",
+        "investment",
+        "(?i)investment"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "money earning",
+      "patterns": [
+        ".*money earning.*",
+        "money.*earning",
+        "(?i)money earning"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "work from home",
+      "patterns": [
+        ".*work from home.*",
+        "work.*from.*home",
+        "(?i)work from home"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "survey job",
+      "patterns": [
+        ".*survey job.*",
+        "survey.*job",
+        "(?i)survey job"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "daily income",
+      "patterns": [
+        ".*daily income.*",
+        "daily.*income",
+        "(?i)daily income"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "cash reward",
+      "patterns": [
+        ".*cash reward.*",
+        "cash.*reward",
+        "(?i)cash reward"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "gift card",
+      "patterns": [
+        ".*gift card.*",
+        "gift.*card",
+        "(?i)gift card"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "amazon coupon",
+      "patterns": [
+        ".*amazon coupon.*",
+        "amazon.*coupon",
+        "(?i)amazon coupon"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "crypto offer",
+      "patterns": [
+        ".*crypto offer.*",
+        "crypto.*offer",
+        "(?i)crypto offer"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "stock tips",
+      "patterns": [
+        ".*stock tips.*",
+        "stock.*tips",
+        "(?i)stock tips"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "trading signals",
+      "patterns": [
+        ".*trading signals.*",
+        "trading.*signals",
+        "(?i)trading signals"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "loan offer",
+      "patterns": [
+        ".*loan offer.*",
+        "loan.*offer",
+        "(?i)loan offer"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "zero interest loan",
+      "patterns": [
+        ".*zero interest loan.*",
+        "zero.*interest.*loan",
+        "(?i)zero interest loan"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "bonus reward",
+      "patterns": [
+        ".*bonus reward.*",
+        "bonus.*reward",
+        "(?i)bonus reward"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "special promotion",
+      "patterns": [
+        ".*special promotion.*",
+        "special.*promotion",
+        "(?i)special promotion"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "limited time",
+      "patterns": [
+        ".*limited time.*",
+        "limited.*time",
+        "(?i)limited time"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "membership fee",
+      "patterns": [
+        ".*membership fee.*",
+        "membership.*fee",
+        "(?i)membership fee"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "upgrade account",
+      "patterns": [
+        ".*upgrade account.*",
+        "upgrade.*account",
+        "(?i)upgrade account"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "festival offer",
+      "patterns": [
+        ".*festival offer.*",
+        "festival.*offer",
+        "(?i)festival offer"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "discount sale",
+      "patterns": [
+        ".*discount sale.*",
+        "discount.*sale",
+        "(?i)discount sale"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "online sale",
+      "patterns": [
+        ".*online sale.*",
+        "online.*sale",
+        "(?i)online sale"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "lucky draw",
+      "patterns": [
+        ".*lucky draw.*",
+        "lucky.*draw",
+        "(?i)lucky draw"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "voucher claim",
+      "patterns": [
+        ".*voucher claim.*",
+        "voucher.*claim",
+        "(?i)voucher claim"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "spin wheel",
+      "patterns": [
+        ".*spin wheel.*",
+        "spin.*wheel",
+        "(?i)spin wheel"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "cashback offer",
+      "patterns": [
+        ".*cashback offer.*",
+        "cashback.*offer",
+        "(?i)cashback offer"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "representative call",
+      "patterns": [
+        ".*representative call.*",
+        "representative.*call",
+        "(?i)representative call"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "agent support",
+      "patterns": [
+        ".*agent support.*",
+        "agent.*support",
+        "(?i)agent support"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "pan service",
+      "patterns": [
+        ".*pan service.*",
+        "pan.*service",
+        "(?i)pan service"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "adhar service",
+      "patterns": [
+        ".*adhar service.*",
+        "adhar.*service",
+        "(?i)adhar service"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "subscription renewal",
+      "patterns": [
+        ".*subscription renewal.*",
+        "subscription.*renewal",
+        "(?i)subscription renewal"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "software update",
+      "patterns": [
+        ".*software update.*",
+        "software.*update",
+        "(?i)software update"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "bank scheme",
+      "patterns": [
+        ".*bank scheme.*",
+        "bank.*scheme",
+        "(?i)bank scheme"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "deposit offer",
+      "patterns": [
+        ".*deposit offer.*",
+        "deposit.*offer",
+        "(?i)deposit offer"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "gold scheme",
+      "patterns": [
+        ".*gold scheme.*",
+        "gold.*scheme",
+        "(?i)gold scheme"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "return policy",
+      "patterns": [
+        ".*return policy.*",
+        "return.*policy",
+        "(?i)return policy"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "order issue",
+      "patterns": [
+        ".*order issue.*",
+        "order.*issue",
+        "(?i)order issue"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "pending delivery",
+      "patterns": [
+        ".*pending delivery.*",
+        "pending.*delivery",
+        "(?i)pending delivery"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "package on hold",
+      "patterns": [
+        ".*package on hold.*",
+        "package.*on.*hold",
+        "(?i)package on hold"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "customs fee",
+      "patterns": [
+        ".*customs fee.*",
+        "customs.*fee",
+        "(?i)customs fee"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "data breach",
+      "patterns": [
+        ".*data breach.*",
+        "data.*breach",
+        "(?i)data breach"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "security alert",
+      "patterns": [
+        ".*security alert.*",
+        "security.*alert",
+        "(?i)security alert"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "spam offer",
+      "patterns": [
+        ".*spam offer.*",
+        "spam.*offer",
+        "(?i)spam offer"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "registration fee",
+      "patterns": [
+        ".*registration fee.*",
+        "registration.*fee",
+        "(?i)registration fee"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "activation fee",
+      "patterns": [
+        ".*activation fee.*",
+        "activation.*fee",
+        "(?i)activation fee"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "processing fee",
+      "patterns": [
+        ".*processing fee.*",
+        "processing.*fee",
+        "(?i)processing fee"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "account update",
+      "patterns": [
+        ".*account update.*",
+        "account.*update",
+        "(?i)account update"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "profile verification",
+      "patterns": [
+        ".*profile verification.*",
+        "profile.*verification",
+        "(?i)profile verification"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "promo code",
+      "patterns": [
+        ".*promo code.*",
+        "promo.*code",
+        "(?i)promo code"
+      ],
+      "risk_score": 55,
+      "reason": "Auto-generated based on scam category"
+    }
+  ],
+  "low_risk": [
+    {
+      "keyword": "promotion",
+      "patterns": [
+        ".*promotion.*",
+        "promotion",
+        "(?i)promotion"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "offer",
+      "patterns": [
+        ".*offer.*",
+        "offer",
+        "(?i)offer"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "discount",
+      "patterns": [
+        ".*discount.*",
+        "discount",
+        "(?i)discount"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "festival sale",
+      "patterns": [
+        ".*festival sale.*",
+        "festival.*sale",
+        "(?i)festival sale"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "special deal",
+      "patterns": [
+        ".*special deal.*",
+        "special.*deal",
+        "(?i)special deal"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "membership",
+      "patterns": [
+        ".*membership.*",
+        "membership",
+        "(?i)membership"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "newsletter",
+      "patterns": [
+        ".*newsletter.*",
+        "newsletter",
+        "(?i)newsletter"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "subscription",
+      "patterns": [
+        ".*subscription.*",
+        "subscription",
+        "(?i)subscription"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "survey",
+      "patterns": [
+        ".*survey.*",
+        "survey",
+        "(?i)survey"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "feedback",
+      "patterns": [
+        ".*feedback.*",
+        "feedback",
+        "(?i)feedback"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "marketing",
+      "patterns": [
+        ".*marketing.*",
+        "marketing",
+        "(?i)marketing"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "advertisement",
+      "patterns": [
+        ".*advertisement.*",
+        "advertisement",
+        "(?i)advertisement"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "sale",
+      "patterns": [
+        ".*sale.*",
+        "sale",
+        "(?i)sale"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "bonus points",
+      "patterns": [
+        ".*bonus points.*",
+        "bonus.*points",
+        "(?i)bonus points"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "reward points",
+      "patterns": [
+        ".*reward points.*",
+        "reward.*points",
+        "(?i)reward points"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "delivery update",
+      "patterns": [
+        ".*delivery update.*",
+        "delivery.*update",
+        "(?i)delivery update"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "order shipped",
+      "patterns": [
+        ".*order shipped.*",
+        "order.*shipped",
+        "(?i)order shipped"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "package update",
+      "patterns": [
+        ".*package update.*",
+        "package.*update",
+        "(?i)package update"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "tracking link",
+      "patterns": [
+        ".*tracking link.*",
+        "tracking.*link",
+        "(?i)tracking link"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "reminder",
+      "patterns": [
+        ".*reminder.*",
+        "reminder",
+        "(?i)reminder"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "bill payment",
+      "patterns": [
+        ".*bill payment.*",
+        "bill.*payment",
+        "(?i)bill payment"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "subscription reminder",
+      "patterns": [
+        ".*subscription reminder.*",
+        "subscription.*reminder",
+        "(?i)subscription reminder"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "new service",
+      "patterns": [
+        ".*new service.*",
+        "new.*service",
+        "(?i)new service"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "account info",
+      "patterns": [
+        ".*account info.*",
+        "account.*info",
+        "(?i)account info"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "product launch",
+      "patterns": [
+        ".*product launch.*",
+        "product.*launch",
+        "(?i)product launch"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "upgrade offer",
+      "patterns": [
+        ".*upgrade offer.*",
+        "upgrade.*offer",
+        "(?i)upgrade offer"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "new feature",
+      "patterns": [
+        ".*new feature.*",
+        "new.*feature",
+        "(?i)new feature"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "holiday offer",
+      "patterns": [
+        ".*holiday offer.*",
+        "holiday.*offer",
+        "(?i)holiday offer"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "promo message",
+      "patterns": [
+        ".*promo message.*",
+        "promo.*message",
+        "(?i)promo message"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "brand promotion",
+      "patterns": [
+        ".*brand promotion.*",
+        "brand.*promotion",
+        "(?i)brand promotion"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "general alert",
+      "patterns": [
+        ".*general alert.*",
+        "general.*alert",
+        "(?i)general alert"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "information update",
+      "patterns": [
+        ".*information update.*",
+        "information.*update",
+        "(?i)information update"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "customer service",
+      "patterns": [
+        ".*customer service.*",
+        "customer.*service",
+        "(?i)customer service"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "support message",
+      "patterns": [
+        ".*support message.*",
+        "support.*message",
+        "(?i)support message"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "order confirmation",
+      "patterns": [
+        ".*order confirmation.*",
+        "order.*confirmation",
+        "(?i)order confirmation"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "invoice",
+      "patterns": [
+        ".*invoice.*",
+        "invoice",
+        "(?i)invoice"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "policy update",
+      "patterns": [
+        ".*policy update.*",
+        "policy.*update",
+        "(?i)policy update"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    },
+    {
+      "keyword": "payment notice",
+      "patterns": [
+        ".*payment notice.*",
+        "payment.*notice",
+        "(?i)payment notice"
+      ],
+      "risk_score": 25,
+      "reason": "Auto-generated based on scam category"
+    }
+  ]
+}
