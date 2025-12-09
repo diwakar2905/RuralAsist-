@@ -33,12 +33,13 @@ os.makedirs(UPLOADS_DIR, exist_ok=True)
 
 # CORS
 
-origins = [
-    "http://localhost:5500",
-    "http://127.0.0.1:5500",
-    "https://ruralassist.vercel.app",
-    "https://ruralasist-beta.vercel.app"
-]
+# Read allowed origins from environment variable, fallback to defaults
+frontend_urls_str = os.environ.get(
+    "FRONTEND_URLS",
+    "http://localhost:5500,http://127.0.0.1:5500,https://ruralassist.vercel.app,https://ruralasist-beta.vercel.app"
+)
+origins = [url.strip() for url in frontend_urls_str.split(",")]
+
 
 app.add_middleware(
     CORSMiddleware,
