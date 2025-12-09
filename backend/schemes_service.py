@@ -17,7 +17,7 @@ import httpx
 from datetime import datetime
 
 
-def get_fuzz():
+
 # --- Lazy import for rapidfuzz (fuzzy search) ---
 fuzz = None
 FUZZY_AVAILABLE = None
