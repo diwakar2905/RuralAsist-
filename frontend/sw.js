@@ -16,7 +16,6 @@ const urlsToCache = [
 
   "/assets/js/main.js",
   "/assets/js/config.js",
-  "/assets/js/chat_float.js",
   "/assets/js/chatbot.js",
   "/assets/js/schemes.js",
   "/assets/js/faq.js",
@@ -24,9 +23,7 @@ const urlsToCache = [
   "/assets/js/ocr.js",
   "/assets/js/profile.js",
 
-  "/assets/images/logo.png",
-  "/assets/images/icon-192.png",
-  "/assets/images/icon-512.png"
+  "/assets/images/logo.png"
 ];
 
 self.addEventListener("install", event => {

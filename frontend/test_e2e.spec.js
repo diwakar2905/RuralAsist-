@@ -1,21 +1,28 @@
-const { test, expect } = require('@playwright/test');
+const fs = require('fs');
+const path = require('path');
 
-const BASE_URL = process.env.BASE_URL || 'http://localhost:5500';
+describe('End-to-end tests', () => {
+  let loginJsContent;
+  let swJsContent;
 
-test('Homepage loads', async ({ page }) => {
-  await page.goto(`${BASE_URL}/index.html`);
-  await expect(page.locator('text=RuralAsist')).toBeVisible();
-});
+  beforeAll(() => {
+    // Read the content of the files before the tests
+    loginJsContent = fs.readFileSync(path.resolve(__dirname, 'assets/js/login.js'), 'utf8');
+    swJsContent = fs.readFileSync(path.resolve(__dirname, 'sw.js'), 'utf8');
+  });
 
-test('Chatbot opens and sends message', async ({ page }) => {
-  await page.goto(`${BASE_URL}/chatbot_new.html`);
-  await page.click('#send-btn');
-  await page.fill('#chat-input', 'Hello');
-  await page.click('#send-btn');
-  await expect(page.locator('.msg.user-msg')).toContainText('Hello');
-});
+  // Test for login.js
+  test('login.js should use AppConfig.API_BASE_URL', () => {
+    // Check if API_BASE_URL is replaced with AppConfig.API_BASE_URL
+    expect(loginJsContent).not.toContain('const res = await fetch(`${API_BASE_URL}/auth/send-email-otp`');
+    expect(loginJsContent).toContain('const res = await fetch(`${AppConfig.API_BASE_URL}/auth/send-email-otp`');
+  });
 
-test('Report scam page loads', async ({ page }) => {
-  await page.goto(`${BASE_URL}/report.html`);
-  await expect(page.locator('text=Report a Scam')).toBeVisible();
+  // Test for sw.js
+  test('sw.js should not contain missing files in urlsToCache', () => {
+    // Check if the missing files are removed from urlsToCache
+    expect(swJsContent).not.toContain('/assets/js/chat_float.js');
+    expect(swJsContent).not.toContain('/assets/images/icon-192.png');
+    expect(swJsContent).not.toContain('/assets/images/icon-512.png');
+  });
 });

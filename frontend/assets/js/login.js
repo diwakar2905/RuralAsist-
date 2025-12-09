@@ -49,7 +49,7 @@ async function sendOTP() {
     updateStatus("📧 Sending OTP to your email...", "info");
 
     try {
-        const res = await fetch(`${API_BASE_URL}/auth/send-email-otp`, {
+        const res = await fetch(`${AppConfig.API_BASE_URL}/auth/send-email-otp`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email })
@@ -105,7 +105,7 @@ async function verifyOTP() {
     updateStatus("🔐 Verifying OTP...", "info");
 
     try {
-        const res = await fetch(`${API_BASE_URL}/auth/verify-email-otp`, {
+        const res = await fetch(`${AppConfig.API_BASE_URL}/auth/verify-email-otp`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, otp })
@@ -179,7 +179,7 @@ async function resendOTP() {
     updateStatus("📧 Resending OTP...", "info");
 
     try {
-        const res = await fetch(`${API_BASE_URL}/auth/resend-otp`, {
+        const res = await fetch(`${AppConfig.API_BASE_URL}/auth/resend-otp`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email })
@@ -256,7 +256,7 @@ async function logLoginActivity(email) {
     if (!token) return;
 
     try {
-        await fetch(`${API_BASE_URL}/profile/activity`, {
+        await fetch(`${AppConfig.API_BASE_URL}/profile/activity`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
