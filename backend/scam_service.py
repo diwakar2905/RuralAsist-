@@ -1,11 +1,10 @@
 from fastapi import APIRouter, HTTPException, Request, Header
 import time
 from jose import jwt
+
 from auth_service import JWT_SECRET, JWT_ALGO
-def get_cache(key, ttl=120):
-def set_cache(key, value):
+
 # --- In-memory response cache ---
-import time
 _RESPONSE_CACHE = {}
 def get_cache(key, ttl=120):
     now = time.time()
@@ -13,6 +12,7 @@ def get_cache(key, ttl=120):
     if entry and now - entry['ts'] < ttl:
         return entry['value']
     return None
+
 def set_cache(key, value):
     _RESPONSE_CACHE[key] = {'value': value, 'ts': time.time()}
 
