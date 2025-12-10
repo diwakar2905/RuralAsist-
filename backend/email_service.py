@@ -9,6 +9,9 @@ SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
 SMTP_SENDER_EMAIL = os.getenv("SMTP_SENDER_EMAIL")
 SMTP_SENDER_NAME = os.getenv("SMTP_SENDER_NAME")
 
+print("SMTP USER:", os.getenv("SMTP_USERNAME"))
+
+
 
 async def send_otp_email(to_email: str, otp: str):
     message = EmailMessage()
