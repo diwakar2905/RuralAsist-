@@ -85,7 +85,7 @@ def check_rate_limit(ip, endpoint, max_req=3, window=10):
     RATE_LIMIT[key] = timestamps
 
 @router.post("/send-email-otp", response_model=AuthResponse)
-def send_email_otp_endpoint(req: SendOtpRequest, request: Request):
+async def send_email_otp_endpoint(req: SendOtpRequest, request: Request):
     client_ip = request.client.host
     check_rate_limit(client_ip, 'send-otp')
     """Send OTP via email using Brevo"""
@@ -109,24 +109,15 @@ def send_email_otp_endpoint(req: SendOtpRequest, request: Request):
     # Send email via Brevo
     if EMAIL_ENABLED:
         try:
-            status_code, message = send_otp_email(email, otp)
-            if status_code == 201:
-                # Track if this is first login
-                if email not in first_time_users:
-                    first_time_users.add(email)
-                return AuthResponse(
-                    success=True,
-                    message=f"✅ OTP sent to {email}. Check your inbox!",
-                    token=None
-                )
-            else:
-                print(f"⚠️ Email send failed for {email}: {message}")
-                print(f"📧 OTP for {email}: {otp} (Console fallback)")
-                return AuthResponse(
-                    success=True,
-                    message="Failed to send OTP. Email service not configured or unreachable.",
-                    token=None
-                )
+            await send_otp_email(email, otp)
+            # Track if this is first login
+            if email not in first_time_users:
+                first_time_users.add(email)
+            return AuthResponse(
+                success=True,
+                message=f"✅ OTP sent to {email}. Check your inbox!",
+                token=None
+            )
         except Exception as e:
             print(f"❌ Email error for {email}: {str(e)}")
             print(f"📧 OTP for {email}: {otp} (Console fallback)")
@@ -145,7 +136,7 @@ def send_email_otp_endpoint(req: SendOtpRequest, request: Request):
 
 
 @router.post("/verify-email-otp", response_model=AuthResponse)
-def verify_email_otp_endpoint(req: VerifyOtpRequest, request: Request):
+async def verify_email_otp_endpoint(req: VerifyOtpRequest, request: Request):
     client_ip = request.client.host
     check_rate_limit(client_ip, 'verify-otp')
     """Verify OTP and issue JWT token"""
@@ -203,7 +194,7 @@ def verify_email_otp_endpoint(req: VerifyOtpRequest, request: Request):
     # Send welcome email for first-time users (async, don't block)
     if EMAIL_ENABLED and email in first_time_users:
         try:
-            send_welcome_email(email)
+            await send_welcome_email(email)
             first_time_users.remove(email)
         except Exception as e:
             print(f"⚠️ Welcome email failed for {email}: {str(e)}")
@@ -216,7 +207,7 @@ def verify_email_otp_endpoint(req: VerifyOtpRequest, request: Request):
 
 
 @router.post("/resend-otp", response_model=AuthResponse)
-def resend_otp(req: SendOtpRequest):
+async def resend_otp(req: SendOtpRequest, request: Request):
     """Resend OTP (same as send-email-otp but with rate limiting)"""
     email = req.email.lower().strip()
     
@@ -230,4 +221,4 @@ def resend_otp(req: SendOtpRequest):
             )
     
     # Reuse send OTP logic
-    return send_email_otp_endpoint(req)
+    return await send_email_otp_endpoint(req, request)
